@@ -7,15 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CF3F652A2387C3A500459859 /* CourseSubject.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF3F65292387C3A500459859 /* CourseSubject.swift */; };
+		CF3F652C2387C61B00459859 /* CourseItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF3F652B2387C61B00459859 /* CourseItem.swift */; };
+		CF3F652E2387C72200459859 /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF3F652D2387C72200459859 /* Storage.swift */; };
 		CF420ABF23852DDE000120F5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF420ABE23852DDE000120F5 /* AppDelegate.swift */; };
 		CF420AC123852DDE000120F5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF420AC023852DDE000120F5 /* SceneDelegate.swift */; };
 		CF420AC323852DDE000120F5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF420AC223852DDE000120F5 /* ViewController.swift */; };
 		CF420AC623852DDE000120F5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF420AC423852DDE000120F5 /* Main.storyboard */; };
 		CF420AC823852DE1000120F5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF420AC723852DE1000120F5 /* Assets.xcassets */; };
 		CF420ACB23852DE1000120F5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF420AC923852DE1000120F5 /* LaunchScreen.storyboard */; };
+		CF420AD423855ACC000120F5 /* Auth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF420AD323855ACC000120F5 /* Auth.storyboard */; };
+		CF420AD623855B66000120F5 /* SignInVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF420AD523855B66000120F5 /* SignInVc.swift */; };
+		CF420AD823855BA6000120F5 /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF420AD723855BA6000120F5 /* SignUpVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CF3F65292387C3A500459859 /* CourseSubject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseSubject.swift; sourceTree = "<group>"; };
+		CF3F652B2387C61B00459859 /* CourseItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseItem.swift; sourceTree = "<group>"; };
+		CF3F652D2387C72200459859 /* Storage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storage.swift; sourceTree = "<group>"; };
 		CF420ABB23852DDE000120F5 /* IteaDiploma.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IteaDiploma.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF420ABE23852DDE000120F5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CF420AC023852DDE000120F5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +33,9 @@
 		CF420AC723852DE1000120F5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CF420ACA23852DE1000120F5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CF420ACC23852DE1000120F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CF420AD323855ACC000120F5 /* Auth.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Auth.storyboard; sourceTree = "<group>"; };
+		CF420AD523855B66000120F5 /* SignInVc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInVc.swift; sourceTree = "<group>"; };
+		CF420AD723855BA6000120F5 /* SignUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +49,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CF3F65272387C32000459859 /* Courses */ = {
+			isa = PBXGroup;
+			children = (
+				CF3F65282387C33700459859 /* ModelCourses */,
+			);
+			path = Courses;
+			sourceTree = "<group>";
+		};
+		CF3F65282387C33700459859 /* ModelCourses */ = {
+			isa = PBXGroup;
+			children = (
+				CF3F65292387C3A500459859 /* CourseSubject.swift */,
+				CF3F652B2387C61B00459859 /* CourseItem.swift */,
+				CF3F652D2387C72200459859 /* Storage.swift */,
+			);
+			path = ModelCourses;
+			sourceTree = "<group>";
+		};
 		CF420AB223852DDE000120F5 = {
 			isa = PBXGroup;
 			children = (
@@ -56,6 +86,8 @@
 		CF420ABD23852DDE000120F5 /* IteaDiploma */ = {
 			isa = PBXGroup;
 			children = (
+				CF3F65272387C32000459859 /* Courses */,
+				CF420AD223855A5F000120F5 /* Authorization */,
 				CF420ABE23852DDE000120F5 /* AppDelegate.swift */,
 				CF420AC023852DDE000120F5 /* SceneDelegate.swift */,
 				CF420AC223852DDE000120F5 /* ViewController.swift */,
@@ -65,6 +97,16 @@
 				CF420ACC23852DE1000120F5 /* Info.plist */,
 			);
 			path = IteaDiploma;
+			sourceTree = "<group>";
+		};
+		CF420AD223855A5F000120F5 /* Authorization */ = {
+			isa = PBXGroup;
+			children = (
+				CF420AD323855ACC000120F5 /* Auth.storyboard */,
+				CF420AD523855B66000120F5 /* SignInVc.swift */,
+				CF420AD723855BA6000120F5 /* SignUpVC.swift */,
+			);
+			path = Authorization;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,6 +167,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF420AD423855ACC000120F5 /* Auth.storyboard in Resources */,
 				CF420ACB23852DE1000120F5 /* LaunchScreen.storyboard in Resources */,
 				CF420AC823852DE1000120F5 /* Assets.xcassets in Resources */,
 				CF420AC623852DDE000120F5 /* Main.storyboard in Resources */,
@@ -140,6 +183,11 @@
 			files = (
 				CF420AC323852DDE000120F5 /* ViewController.swift in Sources */,
 				CF420ABF23852DDE000120F5 /* AppDelegate.swift in Sources */,
+				CF420AD623855B66000120F5 /* SignInVc.swift in Sources */,
+				CF3F652C2387C61B00459859 /* CourseItem.swift in Sources */,
+				CF3F652A2387C3A500459859 /* CourseSubject.swift in Sources */,
+				CF3F652E2387C72200459859 /* Storage.swift in Sources */,
+				CF420AD823855BA6000120F5 /* SignUpVC.swift in Sources */,
 				CF420AC123852DDE000120F5 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
