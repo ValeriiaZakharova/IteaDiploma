@@ -15,6 +15,6 @@ class CourseSubject {
     var time: String?
     var type: String?
     var image: UIImage?
-    var courseItem: [CourseItem]?
+    var courseItem: [CourseItem] = []
     
 }

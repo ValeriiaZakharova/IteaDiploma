@@ -11,7 +11,17 @@
 		CF3F652C2387C61B00459859 /* CourseItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF3F652B2387C61B00459859 /* CourseItem.swift */; };
 		CF3F652E2387C72200459859 /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF3F652D2387C72200459859 /* Storage.swift */; };
 		CF3F65302388278800459859 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF3F652F2388278800459859 /* User.swift */; };
-		CF3F65322388292C00459859 /* MakeUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF3F65312388292C00459859 /* MakeUser.swift */; };
+		CF3F6534238A9AAB00459859 /* Courses.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF3F6533238A9AAB00459859 /* Courses.storyboard */; };
+		CF3F6536238A9BDB00459859 /* CoursSubjectVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF3F6535238A9BDB00459859 /* CoursSubjectVC.swift */; };
+		CF3F6538238A9C0900459859 /* CourseItemVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF3F6537238A9C0900459859 /* CourseItemVC.swift */; };
+		CF3F653A238A9C4700459859 /* FilterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF3F6539238A9C4700459859 /* FilterVC.swift */; };
+		CF3F653C238A9E7900459859 /* ProfilVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF3F653B238A9E7900459859 /* ProfilVC.swift */; };
+		CF3F653E238A9F3900459859 /* UserCoursesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF3F653D238A9F3900459859 /* UserCoursesVC.swift */; };
+		CF3F6540238A9FAB00459859 /* CourseDescriptionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF3F653F238A9FAB00459859 /* CourseDescriptionVC.swift */; };
+		CF3F6542238AA00200459859 /* CourseInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF3F6541238AA00200459859 /* CourseInfoVC.swift */; };
+		CF3F6544238AA06000459859 /* CourceApplyVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF3F6543238AA06000459859 /* CourceApplyVC.swift */; };
+		CF3F6548238AA48900459859 /* CourseSubjCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF3F6546238AA48900459859 /* CourseSubjCell.swift */; };
+		CF3F6549238AA48900459859 /* CourseSubjCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF3F6547238AA48900459859 /* CourseSubjCell.xib */; };
 		CF420ABF23852DDE000120F5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF420ABE23852DDE000120F5 /* AppDelegate.swift */; };
 		CF420AC123852DDE000120F5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF420AC023852DDE000120F5 /* SceneDelegate.swift */; };
 		CF420AC323852DDE000120F5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF420AC223852DDE000120F5 /* ViewController.swift */; };
@@ -28,7 +38,17 @@
 		CF3F652B2387C61B00459859 /* CourseItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseItem.swift; sourceTree = "<group>"; };
 		CF3F652D2387C72200459859 /* Storage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storage.swift; sourceTree = "<group>"; };
 		CF3F652F2388278800459859 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		CF3F65312388292C00459859 /* MakeUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeUser.swift; sourceTree = "<group>"; };
+		CF3F6533238A9AAB00459859 /* Courses.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Courses.storyboard; sourceTree = "<group>"; };
+		CF3F6535238A9BDB00459859 /* CoursSubjectVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoursSubjectVC.swift; sourceTree = "<group>"; };
+		CF3F6537238A9C0900459859 /* CourseItemVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseItemVC.swift; sourceTree = "<group>"; };
+		CF3F6539238A9C4700459859 /* FilterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterVC.swift; sourceTree = "<group>"; };
+		CF3F653B238A9E7900459859 /* ProfilVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilVC.swift; sourceTree = "<group>"; };
+		CF3F653D238A9F3900459859 /* UserCoursesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCoursesVC.swift; sourceTree = "<group>"; };
+		CF3F653F238A9FAB00459859 /* CourseDescriptionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseDescriptionVC.swift; sourceTree = "<group>"; };
+		CF3F6541238AA00200459859 /* CourseInfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseInfoVC.swift; sourceTree = "<group>"; };
+		CF3F6543238AA06000459859 /* CourceApplyVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourceApplyVC.swift; sourceTree = "<group>"; };
+		CF3F6546238AA48900459859 /* CourseSubjCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseSubjCell.swift; sourceTree = "<group>"; };
+		CF3F6547238AA48900459859 /* CourseSubjCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CourseSubjCell.xib; sourceTree = "<group>"; };
 		CF420ABB23852DDE000120F5 /* IteaDiploma.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IteaDiploma.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF420ABE23852DDE000120F5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CF420AC023852DDE000120F5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -64,11 +84,30 @@
 		CF3F65282387C33700459859 /* ModelCourses */ = {
 			isa = PBXGroup;
 			children = (
+				CF3F6545238AA41200459859 /* CourseSubjCell */,
 				CF3F65292387C3A500459859 /* CourseSubject.swift */,
 				CF3F652B2387C61B00459859 /* CourseItem.swift */,
 				CF3F652D2387C72200459859 /* Storage.swift */,
+				CF3F6533238A9AAB00459859 /* Courses.storyboard */,
+				CF3F6535238A9BDB00459859 /* CoursSubjectVC.swift */,
+				CF3F6537238A9C0900459859 /* CourseItemVC.swift */,
+				CF3F6539238A9C4700459859 /* FilterVC.swift */,
+				CF3F653B238A9E7900459859 /* ProfilVC.swift */,
+				CF3F653D238A9F3900459859 /* UserCoursesVC.swift */,
+				CF3F653F238A9FAB00459859 /* CourseDescriptionVC.swift */,
+				CF3F6541238AA00200459859 /* CourseInfoVC.swift */,
+				CF3F6543238AA06000459859 /* CourceApplyVC.swift */,
 			);
 			path = ModelCourses;
+			sourceTree = "<group>";
+		};
+		CF3F6545238AA41200459859 /* CourseSubjCell */ = {
+			isa = PBXGroup;
+			children = (
+				CF3F6546238AA48900459859 /* CourseSubjCell.swift */,
+				CF3F6547238AA48900459859 /* CourseSubjCell.xib */,
+			);
+			path = CourseSubjCell;
 			sourceTree = "<group>";
 		};
 		CF420AB223852DDE000120F5 = {
@@ -110,7 +149,6 @@
 				CF420AD523855B66000120F5 /* SignInVc.swift */,
 				CF420AD723855BA6000120F5 /* SignUpVC.swift */,
 				CF3F652F2388278800459859 /* User.swift */,
-				CF3F65312388292C00459859 /* MakeUser.swift */,
 			);
 			path = Authorization;
 			sourceTree = "<group>";
@@ -173,6 +211,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF3F6549238AA48900459859 /* CourseSubjCell.xib in Resources */,
+				CF3F6534238A9AAB00459859 /* Courses.storyboard in Resources */,
 				CF420AD423855ACC000120F5 /* Auth.storyboard in Resources */,
 				CF420ACB23852DE1000120F5 /* LaunchScreen.storyboard in Resources */,
 				CF420AC823852DE1000120F5 /* Assets.xcassets in Resources */,
@@ -187,16 +227,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF3F6544238AA06000459859 /* CourceApplyVC.swift in Sources */,
+				CF3F653A238A9C4700459859 /* FilterVC.swift in Sources */,
+				CF3F6538238A9C0900459859 /* CourseItemVC.swift in Sources */,
+				CF3F653E238A9F3900459859 /* UserCoursesVC.swift in Sources */,
+				CF3F6542238AA00200459859 /* CourseInfoVC.swift in Sources */,
 				CF420AC323852DDE000120F5 /* ViewController.swift in Sources */,
 				CF420ABF23852DDE000120F5 /* AppDelegate.swift in Sources */,
-				CF3F65322388292C00459859 /* MakeUser.swift in Sources */,
 				CF420AD623855B66000120F5 /* SignInVc.swift in Sources */,
 				CF3F652C2387C61B00459859 /* CourseItem.swift in Sources */,
 				CF3F652A2387C3A500459859 /* CourseSubject.swift in Sources */,
 				CF3F65302388278800459859 /* User.swift in Sources */,
+				CF3F6536238A9BDB00459859 /* CoursSubjectVC.swift in Sources */,
 				CF3F652E2387C72200459859 /* Storage.swift in Sources */,
+				CF3F6540238A9FAB00459859 /* CourseDescriptionVC.swift in Sources */,
+				CF3F6548238AA48900459859 /* CourseSubjCell.swift in Sources */,
 				CF420AD823855BA6000120F5 /* SignUpVC.swift in Sources */,
 				CF420AC123852DDE000120F5 /* SceneDelegate.swift in Sources */,
+				CF3F653C238A9E7900459859 /* ProfilVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

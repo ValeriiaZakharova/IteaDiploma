@@ -2451,3 +2451,32 @@ class Storage {
         return course
     }
 }
+
+
+// MARK: - Users
+
+extension Storage {
+    
+    func makeUser1() -> User {
+        
+        let user1 = User()
+        user1.name = "Valeriia"
+        user1.surName = "Zakharova"
+        user1.age = 27
+        user1.birthday = "20.12.1991"
+        user1.city = "Kharkiv"
+        user1.email = "valeriia@gmail.com"
+        user1.password = "qweasdzxc"
+        user1.phone = "+380996849017"
+        user1.photo = UIImage(named: "photo")
+        
+        let items = makeTestingCourse().courseItem + makeCiscoCourse().courseItem
+        
+        user1.completedCourses = items
+        if let course = makeMobileDevelopmentCourse().courseItem.first {
+            user1.currentCourse = course
+        }
+        return user1
+    }
+    
+}

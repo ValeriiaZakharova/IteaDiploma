@@ -43,13 +43,16 @@ class SignInVc: UIViewController {
     }
     
     @IBAction func didTapSignUp(_ sender: Any) {
+    
+        let storyboardAuth = UIStoryboard(name: "Auth", bundle: nil)
+        let vc = storyboardAuth.instantiateViewController(identifier: "SignUpVC") as! SignUpVC
+        navigationController?.pushViewController(vc, animated: true)
     }
     
 }
 
 extension SignInVc {
     @objc func keyboardWillHide() {
-        bottomConstScrollView.constant = 300
         self.view.endEditing(true)
     }
 }
@@ -57,12 +60,12 @@ extension SignInVc {
 extension SignInVc: UITextFieldDelegate {
     
     func textFieldDidBeginEditing(_ textField: UITextField) {
-        bottomConstScrollView.constant = 300
+        bottomConstScrollView.constant = 260
         
     }
     
     func textFieldDidEndEditing(_ textField: UITextField) {
-        bottomConstScrollView.constant = 30
+        bottomConstScrollView.constant = 0
         
     }
     
@@ -70,9 +73,22 @@ extension SignInVc: UITextFieldDelegate {
         switch textField {
         case userNameTextField:
             passwordTextField.becomeFirstResponder()
-        default:
-            bottomConstScrollView.constant = 30
+            
+        case passwordTextField:
             self.view.endEditing(true)
+            
+            // make validation
+            
+            // if not valid
+            
+            let alert = UIAlertController(title: "Fields invalid", message: "Please check your email or password", preferredStyle: .alert)
+            
+            let close = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+            alert.addAction(close)
+            self.present(alert, animated: true, completion: nil)
+            
+        default:
+            fatalError()
         }
         return true
     }

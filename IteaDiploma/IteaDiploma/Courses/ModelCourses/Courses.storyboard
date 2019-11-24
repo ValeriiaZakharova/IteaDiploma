@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Cours SubjectVC-->
+        <scene sceneID="sRI-1u-bGP">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="20p-Id-NCY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <viewController storyboardIdentifier="CoursSubjectVC" id="Af9-Fm-ewo" customClass="CoursSubjectVC" customModule="IteaDiploma" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3E2-gw-BRK">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gg6-ka-WVk">
+                                <rect key="frame" x="10" y="54" width="60" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="SLz-Y9-jDr"/>
+                                    <constraint firstAttribute="width" constant="60" id="jrN-Yk-UDC"/>
+                                </constraints>
+                                <state key="normal" title="Profile">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xfc-Xl-RCB">
+                                <rect key="frame" x="344" y="54" width="60" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="YfG-BJ-kO6"/>
+                                    <constraint firstAttribute="width" constant="60" id="zdJ-rF-0fC"/>
+                                </constraints>
+                                <state key="normal" title="Filter">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mdx-d9-QUv">
+                                <rect key="frame" x="90" y="54" width="234" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="xxb-qR-rLL"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DEz-iG-DKd">
+                                <rect key="frame" x="20" y="104" width="374" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="rU7-aJ-Kn9">
+                                <rect key="frame" x="0.0" y="158" width="414" height="704"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="dzV-QW-oOG">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="DEz-iG-DKd" firstAttribute="top" secondItem="mdx-d9-QUv" secondAttribute="bottom" constant="20" id="45Z-4f-drW"/>
+                            <constraint firstItem="xfc-Xl-RCB" firstAttribute="top" secondItem="FZR-Dm-L3l" secondAttribute="top" constant="10" id="CQP-O4-IR4"/>
+                            <constraint firstItem="mdx-d9-QUv" firstAttribute="leading" secondItem="Gg6-ka-WVk" secondAttribute="trailing" constant="20" id="J5Y-z4-nOL"/>
+                            <constraint firstItem="FZR-Dm-L3l" firstAttribute="trailing" secondItem="xfc-Xl-RCB" secondAttribute="trailing" constant="10" id="Ke0-Ek-CIh"/>
+                            <constraint firstItem="Gg6-ka-WVk" firstAttribute="leading" secondItem="FZR-Dm-L3l" secondAttribute="leading" constant="10" id="QZw-Th-TJI"/>
+                            <constraint firstItem="FZR-Dm-L3l" firstAttribute="trailing" secondItem="DEz-iG-DKd" secondAttribute="trailing" constant="20" id="TzM-nX-oTN"/>
+                            <constraint firstItem="DEz-iG-DKd" firstAttribute="leading" secondItem="FZR-Dm-L3l" secondAttribute="leading" constant="20" id="a5I-Jx-ZQK"/>
+                            <constraint firstItem="mdx-d9-QUv" firstAttribute="top" secondItem="FZR-Dm-L3l" secondAttribute="top" constant="10" id="eBm-pM-wpw"/>
+                            <constraint firstItem="rU7-aJ-Kn9" firstAttribute="leading" secondItem="FZR-Dm-L3l" secondAttribute="leading" id="fKo-YY-b8i"/>
+                            <constraint firstItem="FZR-Dm-L3l" firstAttribute="bottom" secondItem="rU7-aJ-Kn9" secondAttribute="bottom" id="gqX-jD-aqC"/>
+                            <constraint firstItem="FZR-Dm-L3l" firstAttribute="trailing" secondItem="rU7-aJ-Kn9" secondAttribute="trailing" id="nYB-cf-OjM"/>
+                            <constraint firstItem="xfc-Xl-RCB" firstAttribute="leading" secondItem="mdx-d9-QUv" secondAttribute="trailing" constant="20" id="pEZ-Jg-MXG"/>
+                            <constraint firstItem="rU7-aJ-Kn9" firstAttribute="top" secondItem="DEz-iG-DKd" secondAttribute="bottom" constant="20" id="vok-f1-I7U"/>
+                            <constraint firstItem="Gg6-ka-WVk" firstAttribute="top" secondItem="FZR-Dm-L3l" secondAttribute="top" constant="10" id="xIR-6W-qtL"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="FZR-Dm-L3l"/>
+                    </view>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="-49.275362318840585" y="209.59821428571428"/>
+        </scene>
+        <!--Course ItemVC-->
+        <scene sceneID="HRP-X2-aa8">
+            <objects>
+                <viewController storyboardIdentifier="CourseItemVC" id="eUm-qk-oFg" customClass="CourseItemVC" customModule="IteaDiploma" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1eI-59-E97">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="RmB-Zr-74d"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SMa-z1-8mI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="657" y="210"/>
+        </scene>
+        <!--FilterVC-->
+        <scene sceneID="jd8-Xe-1GJ">
+            <objects>
+                <viewController storyboardIdentifier="FilterVC" id="iXI-be-nZn" customClass="FilterVC" customModule="IteaDiploma" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="sfe-tN-dLq">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="nK6-vY-8Kd"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rc9-Nc-SAi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1375" y="210"/>
+        </scene>
+        <!--ProfilVC-->
+        <scene sceneID="1V5-mp-0Ek">
+            <objects>
+                <viewController storyboardIdentifier="ProfilVC" id="bcC-jx-CeY" customClass="ProfilVC" customModule="IteaDiploma" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="z7i-pq-0Oi">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="G7w-kA-fYD"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YwO-x2-GI7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2113" y="210"/>
+        </scene>
+        <!--User CoursesVC-->
+        <scene sceneID="0E3-Tp-Hb6">
+            <objects>
+                <viewController storyboardIdentifier="UserCoursesVC" id="gj5-aN-BLr" customClass="UserCoursesVC" customModule="IteaDiploma" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mhZ-xv-Rrf">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="T1N-G1-odg"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="boD-U1-eq6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-91" y="928"/>
+        </scene>
+        <!--Course DescriptionVC-->
+        <scene sceneID="8S4-YS-vUn">
+            <objects>
+                <viewController storyboardIdentifier="CourseDescriptionVC" id="YLO-MV-rwJ" customClass="CourseDescriptionVC" customModule="IteaDiploma" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="m4S-Or-D4C">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="nKs-8Q-U0N"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sfQ-gZ-cef" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="657" y="928"/>
+        </scene>
+        <!--Course InfoVC-->
+        <scene sceneID="MqJ-LQ-Xd8">
+            <objects>
+                <viewController storyboardIdentifier="CourseInfoVC" id="1x4-5X-Rf5" customClass="CourseInfoVC" customModule="IteaDiploma" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1dT-El-cZ4">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="UH0-Ic-arM"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dPV-v7-cOq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1374" y="927"/>
+        </scene>
+        <!--Cource ApplyVC-->
+        <scene sceneID="gkc-vM-Fld">
+            <objects>
+                <viewController storyboardIdentifier="CourceApplyVC" id="Sor-O7-hJa" customClass="CourceApplyVC" customModule="IteaDiploma" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="P6F-gs-gcO">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="TBG-xq-gY0"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rHL-xM-TMf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2112" y="927"/>
+        </scene>
+    </scenes>
+</document>
