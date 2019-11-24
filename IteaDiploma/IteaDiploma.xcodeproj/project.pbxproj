@@ -10,6 +10,8 @@
 		CF3F652A2387C3A500459859 /* CourseSubject.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF3F65292387C3A500459859 /* CourseSubject.swift */; };
 		CF3F652C2387C61B00459859 /* CourseItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF3F652B2387C61B00459859 /* CourseItem.swift */; };
 		CF3F652E2387C72200459859 /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF3F652D2387C72200459859 /* Storage.swift */; };
+		CF3F65302388278800459859 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF3F652F2388278800459859 /* User.swift */; };
+		CF3F65322388292C00459859 /* MakeUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF3F65312388292C00459859 /* MakeUser.swift */; };
 		CF420ABF23852DDE000120F5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF420ABE23852DDE000120F5 /* AppDelegate.swift */; };
 		CF420AC123852DDE000120F5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF420AC023852DDE000120F5 /* SceneDelegate.swift */; };
 		CF420AC323852DDE000120F5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF420AC223852DDE000120F5 /* ViewController.swift */; };
@@ -25,6 +27,8 @@
 		CF3F65292387C3A500459859 /* CourseSubject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseSubject.swift; sourceTree = "<group>"; };
 		CF3F652B2387C61B00459859 /* CourseItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseItem.swift; sourceTree = "<group>"; };
 		CF3F652D2387C72200459859 /* Storage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storage.swift; sourceTree = "<group>"; };
+		CF3F652F2388278800459859 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		CF3F65312388292C00459859 /* MakeUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeUser.swift; sourceTree = "<group>"; };
 		CF420ABB23852DDE000120F5 /* IteaDiploma.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IteaDiploma.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF420ABE23852DDE000120F5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CF420AC023852DDE000120F5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -105,6 +109,8 @@
 				CF420AD323855ACC000120F5 /* Auth.storyboard */,
 				CF420AD523855B66000120F5 /* SignInVc.swift */,
 				CF420AD723855BA6000120F5 /* SignUpVC.swift */,
+				CF3F652F2388278800459859 /* User.swift */,
+				CF3F65312388292C00459859 /* MakeUser.swift */,
 			);
 			path = Authorization;
 			sourceTree = "<group>";
@@ -183,9 +189,11 @@
 			files = (
 				CF420AC323852DDE000120F5 /* ViewController.swift in Sources */,
 				CF420ABF23852DDE000120F5 /* AppDelegate.swift in Sources */,
+				CF3F65322388292C00459859 /* MakeUser.swift in Sources */,
 				CF420AD623855B66000120F5 /* SignInVc.swift in Sources */,
 				CF3F652C2387C61B00459859 /* CourseItem.swift in Sources */,
 				CF3F652A2387C3A500459859 /* CourseSubject.swift in Sources */,
+				CF3F65302388278800459859 /* User.swift in Sources */,
 				CF3F652E2387C72200459859 /* Storage.swift in Sources */,
 				CF420AD823855BA6000120F5 /* SignUpVC.swift in Sources */,
 				CF420AC123852DDE000120F5 /* SceneDelegate.swift in Sources */,
