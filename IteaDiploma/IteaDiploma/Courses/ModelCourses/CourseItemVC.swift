@@ -9,6 +9,8 @@
 import UIKit
 
 class CourseItemVC: UIViewController {
+    
+    var courseSubject: CourseSubject!
 
     override func viewDidLoad() {
         super.viewDidLoad()

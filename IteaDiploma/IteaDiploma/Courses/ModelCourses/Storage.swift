@@ -219,7 +219,7 @@ class Storage {
         item2.image = UIImage(named: "")
         
         let course = CourseSubject()
-        course.time = "Testing"
+        course.title = "TESTING"
         course.time = "Evening"
         course.type = "QA"
         course.courseItem = [item1, item2]
@@ -509,7 +509,7 @@ class Storage {
         
         
         let course = CourseSubject()
-        course.title = "Frotend Developmend"
+        course.title = "FROTEND DEVELOPMEND"
         course.image = UIImage(named: "")
         course.time = "Evening"
         course.type = "Frotend"
@@ -1169,7 +1169,7 @@ class Storage {
         
         
         let course = CourseSubject()
-        course.title = "Java Programming"
+        course.title = "JAVA"
         course.image = UIImage(named: "")
         course.time = "Evening"
         course.type = "Programming"
@@ -1555,7 +1555,7 @@ class Storage {
         item4.image = UIImage(named: "")
         
         let course = CourseSubject()
-        course.title = "Python"
+        course.title = "PYTHON"
         course.image = UIImage(named: "")
         course.time = "Evening"
         course.type = "Programming"
@@ -1851,7 +1851,7 @@ class Storage {
         
         
         let course = CourseSubject()
-        course.title = "Veb Design"
+        course.title = "VEB DESIGN"
         course.image = UIImage(named: "")
         course.time = "Evening"
         course.type = "Design"
@@ -2288,7 +2288,7 @@ class Storage {
         
         
         let course = CourseSubject()
-        course.title = "Cisco"
+        course.title = "CISCO"
         course.image = UIImage(named: "")
         course.time = "Daytime"
         course.type = "System administrator"
@@ -2383,7 +2383,7 @@ class Storage {
         
         
         let course = CourseSubject()
-        course.title = "Linux"
+        course.title = "LINUX"
         course.image = UIImage(named: "")
         course.time = "Daytime"
         course.type = "System administrator"
@@ -2443,7 +2443,7 @@ class Storage {
         
         
         let course = CourseSubject()
-        course.title = "Microsoft"
+        course.title = "MICROSOFT"
         course.image = UIImage(named: "")
         course.time = "Daytime"
         course.type = "System administrator"

@@ -374,6 +374,9 @@
                                                     <constraint firstAttribute="height" constant="30" id="zIE-0R-vSt"/>
                                                 </constraints>
                                                 <state key="normal" title="Sign Up"/>
+                                                <connections>
+                                                    <action selector="didTapSignUp:" destination="6RP-tU-eEX" eventType="touchUpInside" id="hAb-LL-DXS"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>

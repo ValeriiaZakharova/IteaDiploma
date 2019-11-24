@@ -41,18 +41,18 @@ class SignUpVC: UIViewController {
     @IBOutlet weak var signUpButton: UIButton!
     
     
-    
-    
-    
-    
-    
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
    
     }
    
+    @IBAction func didTapSignUp(_ sender: Any) {
+        
+        let storyboardAuth = UIStoryboard(name: "Courses", bundle: nil)
+        let vc = storyboardAuth.instantiateViewController(identifier: "CoursSubjectVC") as! CoursSubjectVC
+        navigationController?.pushViewController(vc, animated: true)
+    }
+    
 
 }
