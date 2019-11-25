@@ -12,6 +12,14 @@ enum FilterTime {
     case daily
     case evening
     case none
+    
+    func name() -> String {
+        switch self {
+        case .daily: return "Daytime"
+        case .evening: return "Evening"
+        case .none: return ""
+        }
+    }
 }
 
 enum FilterType {
@@ -22,6 +30,19 @@ enum FilterType {
     case marketing
     case sysAdmin
     case none
+    
+    func name() -> String {
+        switch self {
+        case .design: return "Design"
+        case .frontend: return "Frontend"
+        case .marketing: return "Marketing"
+        case .none: return ""
+        case .programming: return "Programming"
+        case .qa: return "QA"
+        case .sysAdmin: return "System administrator"
+        }
+    }
+    
 }
 
 class FilterVC: UIViewController {
@@ -45,6 +66,8 @@ class FilterVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         updateUI()
+        updateTimesUI()
+        updateTypesUI()
     }
     
     // MARK: - Action Times
@@ -117,13 +140,20 @@ class FilterVC: UIViewController {
         updateTypesUI()
     }
     @IBAction func didTapConfirmFilter(_ sender: Any) {
-        let storyboardCourses = UIStoryboard(name: "Courses", bundle: nil)
-        let vc = storyboardCourses.instantiateViewController(identifier: "CoursSubjectVC") as! CoursSubjectVC
-        vc.filterType = filterType
-        vc.filterTime = filterTime
-        navigationController?.pushViewController(vc, animated: false)
-    
+        
+        
+        if let navigationcontrollers = navigationController?.viewControllers {
+            if let courseSubjectVc = navigationcontrollers[navigationcontrollers.count - 2] as? CoursSubjectVC {
+                courseSubjectVc.filterType = filterType
+                courseSubjectVc.filterTime = filterTime
+            }
+        }
+        navigationController?.popViewController(animated: false)
     }
+    @IBAction func didTapGoBack(_ sender: Any) {
+        navigationController?.popViewController(animated: true)
+    }
+    
 }
 
 extension FilterVC {
@@ -150,10 +180,7 @@ extension FilterVC {
         filterByTypeLabel.backgroundColor = .red
         filterByTypeLabel.layer.cornerRadius = 12
         filterByTypeLabel.clipsToBounds = true
-        
-        
     }
-    
     /// обновляет кнопки для времен в соответсвии с моделями
     func updateTimesUI() {
         let isTimeDaily = filterTime == .daily
@@ -174,7 +201,6 @@ extension FilterVC {
         systemAdmButton.isSelected = filterType == .sysAdmin
     }
 }
-//запомнить строку и передовать на предыдущий вью контроллер
 
 
 

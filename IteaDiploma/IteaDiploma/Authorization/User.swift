@@ -16,7 +16,7 @@ class User {
     var userName: String?
     var password: String?
     var photo: UIImage?
-    var age: Int?
+    var age: String?
     var city: String?
     var birthday: String?
     var email: String?

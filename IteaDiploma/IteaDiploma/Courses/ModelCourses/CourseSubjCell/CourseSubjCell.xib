@@ -28,15 +28,23 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <view alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="X7i-gy-IMk">
+                        <rect key="frame" x="0.0" y="0.0" width="270" height="170"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
                 </subviews>
             </view>
             <constraints>
+                <constraint firstItem="X7i-gy-IMk" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="1ag-BD-0VR"/>
                 <constraint firstAttribute="trailing" secondItem="uk8-Kg-bsj" secondAttribute="trailing" id="D7P-fT-ydJ"/>
                 <constraint firstAttribute="bottom" secondItem="sxq-m6-dVb" secondAttribute="bottom" id="EMy-DV-k2z"/>
                 <constraint firstItem="sxq-m6-dVb" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="G9u-e2-Ea8"/>
                 <constraint firstItem="sxq-m6-dVb" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="Geg-HB-Lvm"/>
                 <constraint firstItem="uk8-Kg-bsj" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="NBP-m0-XYi"/>
                 <constraint firstItem="uk8-Kg-bsj" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="SYG-YQ-gOh"/>
+                <constraint firstItem="X7i-gy-IMk" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="X3x-rw-g9Q"/>
+                <constraint firstAttribute="trailing" secondItem="X7i-gy-IMk" secondAttribute="trailing" id="hs0-Gb-GoD"/>
+                <constraint firstAttribute="bottom" secondItem="X7i-gy-IMk" secondAttribute="bottom" id="m9E-9V-zht"/>
                 <constraint firstAttribute="trailing" secondItem="sxq-m6-dVb" secondAttribute="trailing" id="sgJ-7g-9CY"/>
                 <constraint firstItem="uk8-Kg-bsj" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="x8u-bs-aTz"/>
             </constraints>

@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CF20F258238BEFF300DD8A46 /* CourseItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF20F256238BEFF300DD8A46 /* CourseItemCell.swift */; };
+		CF20F259238BEFF300DD8A46 /* CourseItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF20F257238BEFF300DD8A46 /* CourseItemCell.xib */; };
+		CF20F25C238C236E00DD8A46 /* EditProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF20F25A238C1C6900DD8A46 /* EditProfileVC.swift */; };
+		CF20F260238C2B3300DD8A46 /* UserCourseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF20F25E238C2B3300DD8A46 /* UserCourseCell.swift */; };
+		CF20F261238C2B3300DD8A46 /* UserCourseCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF20F25F238C2B3300DD8A46 /* UserCourseCell.xib */; };
 		CF3F652A2387C3A500459859 /* CourseSubject.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF3F65292387C3A500459859 /* CourseSubject.swift */; };
 		CF3F652C2387C61B00459859 /* CourseItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF3F652B2387C61B00459859 /* CourseItem.swift */; };
 		CF3F652E2387C72200459859 /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF3F652D2387C72200459859 /* Storage.swift */; };
@@ -34,6 +39,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CF20F256238BEFF300DD8A46 /* CourseItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseItemCell.swift; sourceTree = "<group>"; };
+		CF20F257238BEFF300DD8A46 /* CourseItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CourseItemCell.xib; sourceTree = "<group>"; };
+		CF20F25A238C1C6900DD8A46 /* EditProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileVC.swift; sourceTree = "<group>"; };
+		CF20F25E238C2B3300DD8A46 /* UserCourseCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCourseCell.swift; sourceTree = "<group>"; };
+		CF20F25F238C2B3300DD8A46 /* UserCourseCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserCourseCell.xib; sourceTree = "<group>"; };
 		CF3F65292387C3A500459859 /* CourseSubject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseSubject.swift; sourceTree = "<group>"; };
 		CF3F652B2387C61B00459859 /* CourseItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseItem.swift; sourceTree = "<group>"; };
 		CF3F652D2387C72200459859 /* Storage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storage.swift; sourceTree = "<group>"; };
@@ -73,6 +83,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CF20F255238BEFC300DD8A46 /* CourseItemCell */ = {
+			isa = PBXGroup;
+			children = (
+				CF20F256238BEFF300DD8A46 /* CourseItemCell.swift */,
+				CF20F257238BEFF300DD8A46 /* CourseItemCell.xib */,
+			);
+			path = CourseItemCell;
+			sourceTree = "<group>";
+		};
+		CF20F25D238C2B0A00DD8A46 /* UserCourseCell */ = {
+			isa = PBXGroup;
+			children = (
+				CF20F25E238C2B3300DD8A46 /* UserCourseCell.swift */,
+				CF20F25F238C2B3300DD8A46 /* UserCourseCell.xib */,
+			);
+			path = UserCourseCell;
+			sourceTree = "<group>";
+		};
 		CF3F65272387C32000459859 /* Courses */ = {
 			isa = PBXGroup;
 			children = (
@@ -84,6 +112,8 @@
 		CF3F65282387C33700459859 /* ModelCourses */ = {
 			isa = PBXGroup;
 			children = (
+				CF20F25D238C2B0A00DD8A46 /* UserCourseCell */,
+				CF20F255238BEFC300DD8A46 /* CourseItemCell */,
 				CF3F6545238AA41200459859 /* CourseSubjCell */,
 				CF3F65292387C3A500459859 /* CourseSubject.swift */,
 				CF3F652B2387C61B00459859 /* CourseItem.swift */,
@@ -96,6 +126,7 @@
 				CF3F653D238A9F3900459859 /* UserCoursesVC.swift */,
 				CF3F653F238A9FAB00459859 /* CourseDescriptionVC.swift */,
 				CF3F6541238AA00200459859 /* CourseInfoVC.swift */,
+				CF20F25A238C1C6900DD8A46 /* EditProfileVC.swift */,
 				CF3F6543238AA06000459859 /* CourceApplyVC.swift */,
 			);
 			path = ModelCourses;
@@ -214,6 +245,8 @@
 				CF3F6549238AA48900459859 /* CourseSubjCell.xib in Resources */,
 				CF3F6534238A9AAB00459859 /* Courses.storyboard in Resources */,
 				CF420AD423855ACC000120F5 /* Auth.storyboard in Resources */,
+				CF20F261238C2B3300DD8A46 /* UserCourseCell.xib in Resources */,
+				CF20F259238BEFF300DD8A46 /* CourseItemCell.xib in Resources */,
 				CF420ACB23852DE1000120F5 /* LaunchScreen.storyboard in Resources */,
 				CF420AC823852DE1000120F5 /* Assets.xcassets in Resources */,
 				CF420AC623852DDE000120F5 /* Main.storyboard in Resources */,
@@ -237,12 +270,15 @@
 				CF420AD623855B66000120F5 /* SignInVc.swift in Sources */,
 				CF3F652C2387C61B00459859 /* CourseItem.swift in Sources */,
 				CF3F652A2387C3A500459859 /* CourseSubject.swift in Sources */,
+				CF20F260238C2B3300DD8A46 /* UserCourseCell.swift in Sources */,
+				CF20F25C238C236E00DD8A46 /* EditProfileVC.swift in Sources */,
 				CF3F65302388278800459859 /* User.swift in Sources */,
 				CF3F6536238A9BDB00459859 /* CoursSubjectVC.swift in Sources */,
 				CF3F652E2387C72200459859 /* Storage.swift in Sources */,
 				CF3F6540238A9FAB00459859 /* CourseDescriptionVC.swift in Sources */,
 				CF3F6548238AA48900459859 /* CourseSubjCell.swift in Sources */,
 				CF420AD823855BA6000120F5 /* SignUpVC.swift in Sources */,
+				CF20F258238BEFF300DD8A46 /* CourseItemCell.swift in Sources */,
 				CF420AC123852DDE000120F5 /* SceneDelegate.swift in Sources */,
 				CF3F653C238A9E7900459859 /* ProfilVC.swift in Sources */,
 			);

@@ -10,14 +10,47 @@ import UIKit
 
 class CourseItemVC: UIViewController {
     
+    @IBOutlet weak var titleLable: UILabel!
+    @IBOutlet weak var tableView: UITableView!
+    
     var courseSubject: CourseSubject!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        titleLable.text = courseSubject.title
+        tableView.register(UINib(nibName: "CourseItemCell", bundle: nil), forCellReuseIdentifier: "CourseItemCell")
+        tableView.reloadData()
     }
     
+    ///Go back button
+    @IBAction func didTapGoBack(_ sender: Any) {
+        navigationController?.popViewController(animated: true)
+    }
+}
 
-
+extension CourseItemVC: UITableViewDelegate, UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return courseSubject.courseItem.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "CourseItemCell", for: indexPath) as! CourseItemCell
+        let item = courseSubject.courseItem
+        cell.updateCell(data: item[indexPath.row])
+        cell.updateCellUI()
+        return cell
+    }
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 120
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let storyboardCourses = UIStoryboard(name: "Courses", bundle: nil)
+        let vc = storyboardCourses.instantiateViewController(identifier: "CourseDescriptionVC") as! CourseDescriptionVC
+        vc.courseItem = courseSubject.courseItem[indexPath.row]
+        
+        navigationController?.pushViewController(vc, animated: true)
+    }
 }

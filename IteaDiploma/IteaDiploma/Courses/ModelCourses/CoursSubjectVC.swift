@@ -18,9 +18,6 @@ class CoursSubjectVC: UIViewController {
     
     @IBOutlet weak var collectionView: UICollectionView!
     
-    var allCourseSubjects: [CourseSubject] = []
-    
-    ///  filtered
     var courseSubjects: [CourseSubject] = []
     
     var filterTime = FilterTime.none
@@ -35,6 +32,12 @@ class CoursSubjectVC: UIViewController {
         collectionView.reloadData()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        updateCourses()
+        collectionView.reloadData()
+    }
+    
     @IBAction func gogTapGoToProfile(_ sender: Any) {
         let storyboardCourses = UIStoryboard(name: "Courses", bundle: nil)
         let vc = storyboardCourses.instantiateViewController(identifier: "ProfilVC") as! ProfilVC
@@ -46,8 +49,13 @@ class CoursSubjectVC: UIViewController {
         let storyboardCourses = UIStoryboard(name: "Courses", bundle: nil)
         let vc = storyboardCourses.instantiateViewController(identifier: "FilterVC") as! FilterVC
         
+        vc.filterType = filterType
+        vc.filterTime = filterTime
+        
         navigationController?.pushViewController(vc, animated: true)
     }
+    
+    
 }
 
 extension CoursSubjectVC:  UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
@@ -83,9 +91,9 @@ extension CoursSubjectVC:  UICollectionViewDelegate, UICollectionViewDataSource,
 extension CoursSubjectVC {
     
     func updateView() {
-        
+        titleLabel.text = "ITEA - COURSES"
         titleLabel.textAlignment = .center
-        titleLabel.textColor = .white
+        titleLabel.textColor = .black
         titleLabel.backgroundColor = .red
         titleLabel.layer.cornerRadius = 12
         titleLabel.clipsToBounds = true
@@ -103,10 +111,24 @@ extension CoursSubjectVC {
     }
     
     func updateCourses() {
-        allCourseSubjects = Storage().makeCourseSubject()
-        courseSubjects = allCourseSubjects.filter({ subject -> Bool in
-            return subject.type == "Design"
+        var subjects = Storage().makeCourseSubject()
+        
+        subjects = subjects.filter({ subject -> Bool in
+            if filterType == .none {
+                return true
+            } else {
+                return subject.type == filterType.name()
+            }
         })
+        
+        subjects = subjects.filter({ subject -> Bool in
+            if filterTime == .none {
+                return true
+            } else {
+                return subject.time == filterTime.name()
+            }
+        })
+        
+        self.courseSubjects = subjects
     }
-    
 }
