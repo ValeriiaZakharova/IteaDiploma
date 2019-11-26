@@ -11,25 +11,24 @@ import UIKit
 class SignInVc: UIViewController {
     
     @IBOutlet weak var userNameLabel: UILabel!
-    @IBOutlet weak var errorUserNameLabel: UILabel!
     @IBOutlet weak var passwordLabel: UILabel!
-    @IBOutlet weak var errorPasswordLabel: UILabel!
     @IBOutlet weak var coverImage: UIImageView!
+    @IBOutlet weak var imageItea: UIImageView!
     
+    @IBOutlet weak var firstBlockView: UIView!
+    @IBOutlet weak var secondBlockView: UIView!
     @IBOutlet weak var userNameTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var bottomConstScrollView: NSLayoutConstraint!
     @IBOutlet weak var signIn: UIButton!
     @IBOutlet weak var signUp: UIButton!
     
-    @IBOutlet weak var errorNameConst: NSLayoutConstraint!
-    @IBOutlet weak var errorPasswordConst: NSLayoutConstraint!
-    
-    
-    
+    var users: [User] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        users = Storage().makeUsers()
+        
         userNameTextField.delegate = self
         passwordTextField.delegate = self
         updateView()
@@ -38,17 +37,33 @@ class SignInVc: UIViewController {
     }
     
     @IBAction func didTapSignIn(_ sender: Any) {
+        var authorizedUser: User? = nil
+        for user in users {
+            if userNameTextField.text == user.email, passwordTextField.text == user.password {
+                authorizedUser = user
+                break
+            }
+        }
         
+        if let user = authorizedUser {
+            let storyboardCourses = UIStoryboard(name: "Courses", bundle: nil)
+            let vc = storyboardCourses.instantiateViewController(identifier: "CoursSubjectVC") as! CoursSubjectVC
+            //vc.users = users
+            navigationController?.pushViewController(vc, animated: true)
+        } else {
+            let alert = UIAlertController(title: "Sorry, something went wrong", message: "Please check your email or password", preferredStyle: .alert)
+            let close = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+            alert.addAction(close)
+            self.present(alert, animated: true, completion: nil)
+        }
         
     }
-    
     @IBAction func didTapSignUp(_ sender: Any) {
     
         let storyboardAuth = UIStoryboard(name: "Auth", bundle: nil)
         let vc = storyboardAuth.instantiateViewController(identifier: "SignUpVC") as! SignUpVC
         navigationController?.pushViewController(vc, animated: true)
     }
-    
 }
 
 extension SignInVc {
@@ -58,51 +73,65 @@ extension SignInVc {
 }
 
 extension SignInVc: UITextFieldDelegate {
-    
     func textFieldDidBeginEditing(_ textField: UITextField) {
         bottomConstScrollView.constant = 260
-        
     }
     
     func textFieldDidEndEditing(_ textField: UITextField) {
         bottomConstScrollView.constant = 0
-        
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         switch textField {
         case userNameTextField:
             passwordTextField.becomeFirstResponder()
-            
         case passwordTextField:
             self.view.endEditing(true)
-            
-            // make validation
-            
-            // if not valid
-            
-            let alert = UIAlertController(title: "Fields invalid", message: "Please check your email or password", preferredStyle: .alert)
-            
-            let close = UIAlertAction(title: "OK", style: .cancel, handler: nil)
-            alert.addAction(close)
-            self.present(alert, animated: true, completion: nil)
-            
         default:
             fatalError()
         }
         return true
     }
-    
 }
 
 extension SignInVc {
-    
     func updateView() {
+        //images
         coverImage.image = UIImage(named: "itea")
-        signIn.backgroundColor = .brown
-        signIn.titleLabel?.text = "SIGN IN"
-        signIn.titleLabel?.textColor = .red
+        imageItea.image = UIImage(named: "panda")
+        
+        //buttons
+        signIn.backgroundColor = .white
+        signIn.setTitle("SING IN", for: .normal)
+        signIn.layer.cornerRadius = 10
+        signIn.clipsToBounds = true
+        
+        signUp.backgroundColor = .white
+        signUp.setTitle("SING UP", for: .normal)
+        signUp.layer.cornerRadius = 10
+        signUp.clipsToBounds = true
+        
+        //view1
+        firstBlockView.layer.cornerRadius = 15
+        firstBlockView.clipsToBounds = true
+        firstBlockView.clipsToBounds = true
+        firstBlockView.layer.masksToBounds = false
+        firstBlockView.layer.shadowColor = UIColor.black.cgColor
+        firstBlockView.layer.shadowRadius = 15
+        firstBlockView.layer.cornerRadius = 15.0
+        firstBlockView.layer.shadowOffset = CGSize(width: 5.0, height: 5.0)
+        firstBlockView.layer.shadowOpacity = 0.8
+        
+        //view2
+        secondBlockView.layer.cornerRadius = 15
+        secondBlockView.clipsToBounds = true
+        secondBlockView.clipsToBounds = true
+        secondBlockView.layer.masksToBounds = false
+        secondBlockView.layer.shadowColor = UIColor.black.cgColor
+        secondBlockView.layer.shadowRadius = 15
+        secondBlockView.layer.cornerRadius = 15.0
+        secondBlockView.layer.shadowOffset = CGSize(width: 5.0, height: 5.0)
+        secondBlockView.layer.shadowOpacity = 0.8
+    
     }
-    
-    
 }

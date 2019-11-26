@@ -24,7 +24,6 @@ class User {
     var currentCourse: CourseItem?
     var completedCourses: [CourseItem]?
     var work: String?
-    
 }
 
 

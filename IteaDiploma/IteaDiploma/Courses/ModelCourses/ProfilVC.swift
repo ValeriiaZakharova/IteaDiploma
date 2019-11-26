@@ -32,11 +32,11 @@ class ProfilVC: UIViewController {
     @IBOutlet weak var currentCoursLabel: UILabel!
     @IBOutlet weak var workLabel: UILabel!
     
-    var user: User!
+    var users: [User] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        user = Storage().makeUsers()
+        users = Storage().makeUsers()
         updateUI()
         updateLabel()
     }
@@ -46,32 +46,32 @@ class ProfilVC: UIViewController {
     }
     
     @IBAction func didTapGoEditProfile(_ sender: Any) {
-        let storyboardCourses = UIStoryboard(name: "Courses", bundle: nil)
-        let vc = storyboardCourses.instantiateViewController(identifier: "EditProfileVC") as! EditProfileVC
-        vc.user = user
-        navigationController?.pushViewController(vc, animated: true)
+//        let storyboardCourses = UIStoryboard(name: "Courses", bundle: nil)
+//        let vc = storyboardCourses.instantiateViewController(identifier: "EditProfileVC") as! EditProfileVC
+//        vc.user = user
+//        navigationController?.pushViewController(vc, animated: true)
     }
     
     @IBAction func didTapgoToLastCourses(_ sender: Any) {
         let storyboardCourses = UIStoryboard(name: "Courses", bundle: nil)
         let vc = storyboardCourses.instantiateViewController(identifier: "UserCoursesVC") as! UserCoursesVC
-        vc.user = user
+        //vc.user = users
         navigationController?.pushViewController(vc, animated: true)
     }
 }
 
 extension ProfilVC {
     func updateLabel() {
-        userImageView.image = user.photo
-        userNameLabel.text = user.name
-        usreSecondNameLabel.text = user.surName
-        useAgeLabel.text = user.age
-        userCityLabel.text = user.city
-        userWorkLabel.text = user.work
-        userBirthdayLabel.text = user.birthday
-        userEmailLabel.text = user.email
-        userPhoneLabel.text = user.phone
-        userCurrentCoursesLabel.text = user.currentCourse?.title
+//        userImageView.image = user1.photo
+//        userNameLabel.text = user.name
+//        usreSecondNameLabel.text = user.surName
+//        useAgeLabel.text = user.age
+//        userCityLabel.text = user.city
+//        userWorkLabel.text = user.work
+//        userBirthdayLabel.text = user.birthday
+//        userEmailLabel.text = user.email
+//        userPhoneLabel.text = user.phone
+//        userCurrentCoursesLabel.text = user.currentCourse?.title
     }
     
     func updateUI() {

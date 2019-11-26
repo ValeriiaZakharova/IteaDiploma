@@ -512,7 +512,7 @@ class Storage {
         course.title = "FROTEND DEVELOPMEND"
         course.image = UIImage(named: "")
         course.time = "Evening"
-        course.type = "Frotend"
+        course.type = "Frontend"
         course.courseItem = [item1, item2, item3, item4]
         return course
     }
@@ -767,7 +767,7 @@ class Storage {
         course.title = "JS DEVELOPMENT"
         course.image = UIImage(named: "")
         course.time = "Evening"
-        course.type = "Frotend"
+        course.type = "Frontend"
         course.courseItem = [item1, item2, item3, item4]
         return course
     }
@@ -2457,7 +2457,7 @@ class Storage {
 
 extension Storage {
     
-    func makeUsers() -> User {
+    func makeUsers() -> [User] {
         
         let user1 = User()
         user1.name = "Valeriia"
@@ -2469,6 +2469,7 @@ extension Storage {
         user1.password = "qweasdzxc"
         user1.phone = "+380996849017"
         user1.photo = UIImage(named: "photo")
+        user1.userName = "valeriikaa"
         
         let items = makeTestingCourse().courseItem + makeCiscoCourse().courseItem
         
@@ -2476,7 +2477,7 @@ extension Storage {
         if let course = makeMobileDevelopmentCourse().courseItem.first {
             user1.currentCourse = course
         }
-        return user1
+        return [user1]
     }
     
 }

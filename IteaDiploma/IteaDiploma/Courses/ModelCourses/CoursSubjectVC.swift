@@ -18,6 +18,7 @@ class CoursSubjectVC: UIViewController {
     
     @IBOutlet weak var collectionView: UICollectionView!
     
+    var users: [User] = []
     var courseSubjects: [CourseSubject] = []
     
     var filterTime = FilterTime.none

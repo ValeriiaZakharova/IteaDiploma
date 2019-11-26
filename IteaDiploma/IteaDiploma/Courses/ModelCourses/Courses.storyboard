@@ -729,85 +729,6 @@
             </objects>
             <point key="canvasLocation" x="2113" y="210"/>
         </scene>
-        <!--Edit ProfileVC-->
-        <scene sceneID="qxr-Uq-FTg">
-            <objects>
-                <viewController storyboardIdentifier="EditProfileVC" id="RPV-iy-kx4" customClass="EditProfileVC" customModule="IteaDiploma" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="jkl-A4-ShT">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Llj-pj-gPW">
-                                <rect key="frame" x="20" y="64" width="60" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="KaL-KA-eXA"/>
-                                    <constraint firstAttribute="width" constant="60" id="NNY-wp-Eww"/>
-                                </constraints>
-                                <state key="normal" image="back"/>
-                                <connections>
-                                    <action selector="didTapGoBack:" destination="eUm-qk-oFg" eventType="touchUpInside" id="i2O-bm-0Fp"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BNs-Mh-WNX">
-                                <rect key="frame" x="314" y="64" width="80" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="80" id="But-3P-WIu"/>
-                                    <constraint firstAttribute="height" constant="30" id="yrl-SW-JJe"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <state key="normal" title="Save">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                            </button>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yU7-Mn-6FG">
-                                <rect key="frame" x="0.0" y="114" width="414" height="748"/>
-                                <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lrS-FJ-U5q">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="748"/>
-                                        <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4Q9-JU-Aqo">
-                                                <rect key="frame" x="107" y="5" width="200" height="200"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="200" id="9BO-wg-huZ"/>
-                                                    <constraint firstAttribute="width" constant="200" id="y5w-Dq-pzj"/>
-                                                </constraints>
-                                            </imageView>
-                                        </subviews>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                        <constraints>
-                                            <constraint firstItem="4Q9-JU-Aqo" firstAttribute="centerX" secondItem="lrS-FJ-U5q" secondAttribute="centerX" id="Kgw-Zy-noL"/>
-                                            <constraint firstItem="4Q9-JU-Aqo" firstAttribute="top" secondItem="lrS-FJ-U5q" secondAttribute="top" constant="5" id="zy3-tU-Zat"/>
-                                        </constraints>
-                                    </view>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstItem="lrS-FJ-U5q" firstAttribute="leading" secondItem="yU7-Mn-6FG" secondAttribute="leading" id="0Sl-8b-WI0"/>
-                                    <constraint firstItem="lrS-FJ-U5q" firstAttribute="height" secondItem="yU7-Mn-6FG" secondAttribute="height" id="4Tf-KP-J0d"/>
-                                    <constraint firstItem="lrS-FJ-U5q" firstAttribute="top" secondItem="yU7-Mn-6FG" secondAttribute="top" id="6bb-7G-H0m"/>
-                                    <constraint firstAttribute="bottom" secondItem="lrS-FJ-U5q" secondAttribute="bottom" id="O3G-hB-z8L"/>
-                                    <constraint firstItem="lrS-FJ-U5q" firstAttribute="centerX" secondItem="yU7-Mn-6FG" secondAttribute="centerX" id="PCB-1G-NyS"/>
-                                    <constraint firstAttribute="trailing" secondItem="lrS-FJ-U5q" secondAttribute="trailing" id="qIP-45-lbL"/>
-                                </constraints>
-                            </scrollView>
-                        </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <constraints>
-                            <constraint firstItem="64o-sJ-f42" firstAttribute="trailing" secondItem="yU7-Mn-6FG" secondAttribute="trailing" id="2MZ-PO-onf"/>
-                            <constraint firstItem="Llj-pj-gPW" firstAttribute="top" secondItem="64o-sJ-f42" secondAttribute="top" constant="20" id="3iq-D0-b5F"/>
-                            <constraint firstItem="Llj-pj-gPW" firstAttribute="leading" secondItem="64o-sJ-f42" secondAttribute="leading" constant="20" id="4Ri-DV-dat"/>
-                            <constraint firstItem="64o-sJ-f42" firstAttribute="bottom" secondItem="yU7-Mn-6FG" secondAttribute="bottom" id="9UN-zZ-qB3"/>
-                            <constraint firstItem="BNs-Mh-WNX" firstAttribute="top" secondItem="64o-sJ-f42" secondAttribute="top" constant="20" id="cN3-Z6-chT"/>
-                            <constraint firstItem="yU7-Mn-6FG" firstAttribute="leading" secondItem="64o-sJ-f42" secondAttribute="leading" id="gNs-ha-Dvj"/>
-                            <constraint firstItem="yU7-Mn-6FG" firstAttribute="top" secondItem="BNs-Mh-WNX" secondAttribute="bottom" constant="20" id="rAX-o4-5aA"/>
-                            <constraint firstItem="64o-sJ-f42" firstAttribute="trailing" secondItem="BNs-Mh-WNX" secondAttribute="trailing" constant="20" id="xcw-wd-eTM"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="64o-sJ-f42"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="CMC-Yi-hnV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2838" y="210"/>
-        </scene>
         <!--User CoursesVC-->
         <scene sceneID="0E3-Tp-Hb6">
             <objects>
@@ -830,6 +751,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="T1N-G1-odg"/>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="OKa-Fy-NPr" id="m3Y-dl-0Cq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="boD-U1-eq6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
