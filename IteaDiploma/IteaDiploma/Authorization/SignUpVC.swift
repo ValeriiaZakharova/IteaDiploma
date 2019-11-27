@@ -187,7 +187,7 @@ extension SignUpVC {
             errorEmailConst.priority = UILayoutPriority(rawValue: 700)
             return true
         } else {
-            errorEmailLabel.text = "Sorry, email adress should have @ "
+            errorEmailLabel.text = "Sorry, email adress should contains @"
             errorEmailConst.priority = UILayoutPriority(rawValue: 900)
             return false
         }
@@ -198,7 +198,7 @@ extension SignUpVC {
             errorPhoneConst.priority = UILayoutPriority(rawValue: 700)
             return true
         } else {
-            errorPhoneLabel.text = "Sorry, phone number should contains "+" "
+            errorPhoneLabel.text = "Sorry, phone number should contains + "
             errorPhoneConst.priority = UILayoutPriority(rawValue: 900)
             return false
         }
@@ -433,7 +433,7 @@ extension SignUpVC: UITextFieldDelegate  {
     }
     
     
-    // ПЕРЕДЕЛАТЬ СКОНСТРЙНЫ 
+    // ПЕРЕДЕЛАТЬ СКОНСТРЙНЫ
     
     
     

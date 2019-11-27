@@ -10,6 +10,7 @@ import UIKit
 
 class CoursSubjectVC: UIViewController {
     
+    @IBOutlet weak var coverImage: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var profileButton: UIButton!
     @IBOutlet weak var filterButton: UIButton!
@@ -68,6 +69,7 @@ extension CoursSubjectVC:  UICollectionViewDelegate, UICollectionViewDataSource,
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CourseSubjCell", for: indexPath) as! CourseSubjCell
         cell.updateCell(data: courseSubjects[indexPath.row])
         cell.updateCellContent()
+//        cell.contentView.layer.cornerRadius = cell.contentView.bounds.height / 2
         return cell
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
@@ -92,23 +94,29 @@ extension CoursSubjectVC:  UICollectionViewDelegate, UICollectionViewDataSource,
 extension CoursSubjectVC {
     
     func updateView() {
+        //labels
         titleLabel.text = "ITEA - COURSES"
         titleLabel.textAlignment = .center
         titleLabel.textColor = .black
-        titleLabel.backgroundColor = .red
-        titleLabel.layer.cornerRadius = 12
+        titleLabel.backgroundColor = .white
+        titleLabel.layer.cornerRadius = 10
         titleLabel.clipsToBounds = true
-        profileButton.titleLabel?.text = "PROFILE"
-        profileButton.backgroundColor = .red
-        profileButton.titleLabel?.textColor = .white
-        profileButton.layer.cornerRadius = 12
+        
+        //buttons
+        profileButton.setTitle("PROFILE", for: .normal)
+        profileButton.backgroundColor = .white
+        profileButton.layer.cornerRadius = 10
         profileButton.clipsToBounds = true
-        filterButton.titleLabel?.text = "FILTER"
-        filterButton.backgroundColor = .red
-        filterButton.titleLabel?.textColor = .white
-        filterButton.layer.cornerRadius = 12
+        filterButton.setTitle("FILTER", for: .normal)
+        filterButton.backgroundColor = .white
+        filterButton.layer.cornerRadius = 10
         filterButton.clipsToBounds = true
+        //textfield
         searchTextField.borderStyle = .roundedRect
+        
+        //image view
+        
+        coverImage.image = UIImage(named: "itea")
     }
     
     func updateCourses() {

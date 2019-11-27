@@ -20,6 +20,8 @@ class CourseDescriptionVC: UIViewController {
     @IBOutlet weak var goOnCourseButton: UIButton!
     @IBOutlet weak var aboutCourseView: UIView!
     @IBOutlet weak var skillsView: UIView!
+    @IBOutlet weak var coverImage: UIImageView!
+    
     
     var courseItem: CourseItem!
     
@@ -59,35 +61,56 @@ extension CourseDescriptionVC {
     }
     
     func updateUI() {
+        coverImage.image = UIImage(named: "itea")
+        
         titleLabel.textAlignment = .center
-        titleLabel.backgroundColor = .red
-        titleLabel.layer.cornerRadius = 12
+        titleLabel.textColor = .black
+        titleLabel.backgroundColor = .white
+        titleLabel.layer.cornerRadius = 10
         titleLabel.clipsToBounds = true
         
         aboutCourseLabel.textAlignment = .left
+        aboutCourseLabel.textColor = .white
         
         descriptionLabel.textAlignment = .left
-        aboutCourseView.layer.borderColor = UIColor.black.cgColor
-        aboutCourseView.layer.borderWidth = 1
+        descriptionLabel.textColor = .white
+        
+        aboutCourseView.layer.borderColor = UIColor.white.cgColor
+        aboutCourseView.layer.borderWidth = 2
+        aboutCourseView.clipsToBounds = true
+        aboutCourseView.layer.masksToBounds = false
+        aboutCourseView.layer.shadowColor = UIColor.black.cgColor
+        aboutCourseView.layer.shadowRadius = 15
+        aboutCourseView.layer.cornerRadius = 15.0
+        aboutCourseView.layer.shadowOffset = CGSize(width: 5.0, height: 5.0)
+        aboutCourseView.layer.shadowOpacity = 1
         
         afterCourseLabel.textAlignment = .left
+        afterCourseLabel.textColor = .white
         
         skillsLabel.textAlignment = .left
-        skillsView.layer.borderColor = UIColor.black.cgColor
-        skillsView.layer.borderWidth = 1
+        skillsLabel.textColor = .white
         
-        moreButton.backgroundColor = .red
-        moreButton.titleLabel?.text = "More"
+        skillsView.layer.borderColor = UIColor.white.cgColor
+        skillsView.layer.borderWidth = 1
+        skillsView.clipsToBounds = true
+        skillsView.layer.masksToBounds = false
+        skillsView.layer.shadowColor = UIColor.black.cgColor
+        skillsView.layer.shadowRadius = 15
+        skillsView.layer.cornerRadius = 15.0
+        skillsView.layer.shadowOffset = CGSize(width: 5.0, height: 5.0)
+        skillsView.layer.shadowOpacity = 1
+        
+        moreButton.backgroundColor = .white
         moreButton.titleLabel?.textAlignment = .center
         moreButton.titleLabel?.textColor = .black
         moreButton.layer.cornerRadius = 12
         moreButton.clipsToBounds = true
         
-        goOnCourseButton.backgroundColor = .red
-        goOnCourseButton.titleLabel?.text = "More"
+        goOnCourseButton.backgroundColor = .white
         goOnCourseButton.titleLabel?.textAlignment = .center
-        goOnCourseButton.titleLabel?.textColor = .black
         goOnCourseButton.layer.cornerRadius = 12
         goOnCourseButton.clipsToBounds = true
+        
     }
 }

@@ -129,7 +129,7 @@ class Storage {
         Создавать тест-кейсы и правильно их объединять в наборы
         Разбираться в каждой стадии QA-процесса
         """
-        item1.image = UIImage(named: "")
+        item1.image = UIImage(named: "qabase")
         
         let item2 = CourseItem()
         item2.title = "QA Advanced"
@@ -216,12 +216,13 @@ class Storage {
         Претендовать на должность младшего мануального тестировщика ПО
         Сдать сертификационный экзамен ISTQB Foundation
         """
-        item2.image = UIImage(named: "")
+        item2.image = UIImage(named: "qaadvans")
         
         let course = CourseSubject()
         course.title = "TESTING"
         course.time = "Evening"
         course.type = "QA"
+        course.image = UIImage(named: "qa")
         course.courseItem = [item1, item2]
         
         return course
@@ -319,7 +320,7 @@ class Storage {
         Работать с WORDPRESS (Создавать и подключать базу данных к WP, загружать темы и работать с плагинами);
         Сверстать одностраничный сайт и выгрузить его на хостинг для общего доступа пользователей по ссылке.
         """
-        item1.image = UIImage(named: "")
+        item1.image = UIImage(named: "HTML & CSS")
         
         let item2 = CourseItem()
         item2.title = "JavaScript Base"
@@ -371,7 +372,7 @@ class Storage {
         Создавать приложения с помощью изученных условных и циклических конструкций;
         Более уверенно работать в команде и понимать логику рабочего процесса при разработке приложения.
         """
-        item2.image = UIImage(named: "")
+        item2.image = UIImage(named: "JavaScript Base")
         
         let item3 = CourseItem()
         item3.title = "JavaScript Advanced"
@@ -449,7 +450,7 @@ class Storage {
         Управлять DOM через использование Javascript;
         Работать с локальными хранилищами данных.
         """
-        item3.image = UIImage(named: "")
+        item3.image = UIImage(named: "javascriptA")
         
         let item4 = CourseItem()
         item4.title = "Frontend Advanced"
@@ -505,12 +506,12 @@ class Storage {
         Владеть современным стеком технологий для разработки Frontend
         Знать тонкости работы с браузером, современными библиотеками и фреимворками
         """
-        item4.image = UIImage(named: "")
+        item4.image = UIImage(named: "Frontend Advanced")
         
         
         let course = CourseSubject()
-        course.title = "FROTEND DEVELOPMEND"
-        course.image = UIImage(named: "")
+        course.title = "FRONTEND"
+        course.image = UIImage(named: "fron")
         course.time = "Evening"
         course.type = "Frontend"
         course.courseItem = [item1, item2, item3, item4]
@@ -548,7 +549,7 @@ class Storage {
         Проектировать и строить полноценное приложение или продвинутый сайт на фреимворке React.js
         Использовать последние новинки современной верстки JSX и "Виртуальный DOM" в своей работе
         """
-        item1.image = UIImage(named: "")
+        item1.image = UIImage(named: "React.js")
         
         let item2 = CourseItem()
         item2.title = "React Native Base"
@@ -635,7 +636,7 @@ class Storage {
         Разрабатывать простые приложения с использованием основных функций фреймворка React Native
         Работать с удаленными данными и визуальными компонентами
         """
-        item2.image = UIImage(named: "")
+        item2.image = UIImage(named: "React Native Base")
         
         let item3 = CourseItem()
         item3.title = "React Native Advanced"
@@ -693,7 +694,7 @@ class Storage {
         Работать с компонентами MapView и определять местонахождение пользователей
         Внедрять в приложения динамичные и анимированные переходы
         """
-        item3.image = UIImage(named: "")
+        item3.image = UIImage(named: "React Native Advanced")
         
         let item4 = CourseItem()
         item4.title = "Angular 8 Base"
@@ -760,12 +761,12 @@ class Storage {
         Создавать простые одностраничные приложения, используя фреймворк
         Использовать CLI (Command line interface) для создания и разработки проекта
         """
-        item4.image = UIImage(named: "")
+        item4.image = UIImage(named: "ngular 8 Base")
         
         
         let course = CourseSubject()
         course.title = "JS DEVELOPMENT"
-        course.image = UIImage(named: "")
+        course.image = UIImage(named: "jc")
         course.time = "Evening"
         course.type = "Frontend"
         course.courseItem = [item1, item2, item3, item4]
@@ -829,7 +830,7 @@ class Storage {
         — Работать с cookie и sessions
         — Понимать основы HTTP-протокола
         """
-        item1.image = UIImage(named: "")
+        item1.image = UIImage(named: "phpbase")
         
         let item2 = CourseItem()
         item2.title = "PHP Advanced"
@@ -966,12 +967,12 @@ class Storage {
         Брать проекты на фрилансе
         Организовать собственный стартап
         """
-        item2.image = UIImage(named: "")
+        item2.image = UIImage(named: "phpad")
         
         
         let course = CourseSubject()
         course.title = "PHP"
-        course.image = UIImage(named: "")
+        course.image = UIImage(named: "php")
         course.time = "Evening"
         course.type = "Programming"
         course.courseItem = [item1, item2]
@@ -979,7 +980,7 @@ class Storage {
     }
     func makeJavaCourse() -> CourseSubject{
         let item1 = CourseItem()
-        item1.title = "Разработка Java веб-приложений"
+        item1.title = "Java veb"
         item1.description = """
         Описание курса:
         Вы познакомитесь со Spring Core и спецификацией Java Persistence API (JPA). Рассмотрите, что представляют из себя Servlet container и базовая технология для формирования отображения Java Server Pages (JSP). Затем перейдете к изучению Spring MVC и стандартной архитектуре веб-приложений. Рассмотрите RESTful веб-сервисы, на основе которых сейчас создаются современные приложения. В завершение узнаете, как организован процесс разработки приложений с использованием систем Continuous Integration. Во время курса Вы разработаете учебное веб-приложение в соответствии с шаблоном MVС, взаимодействующее с СУБД с помощью JPA. Далее перепишете его на основе Spring MVC и добавите в него поддержку RESTful веб-сервисов.
@@ -1051,7 +1052,7 @@ class Storage {
         Разрабатывать приложения
         Приступить к дальнейшему профессиональному изучению Spring Core, SpringMVC и ORM-фреймворков
         """
-        item1.image = UIImage(named: "")
+        item1.image = UIImage(named: "javaVeb")
         
         let item2 = CourseItem()
         item2.title = "Scala programming"
@@ -1165,12 +1166,12 @@ class Storage {
         Тестировать написанный код
         Начать изучение фреймворков: Spark, Play Framework, Akka и др.
         """
-        item2.image = UIImage(named: "")
+        item2.image = UIImage(named: "Scala programming")
         
         
         let course = CourseSubject()
         course.title = "JAVA"
-        course.image = UIImage(named: "")
+        course.image = UIImage(named: "java")
         course.time = "Evening"
         course.type = "Programming"
         course.courseItem = [item1, item2]
@@ -1300,7 +1301,7 @@ class Storage {
         Создавать программы среднего уровня сложности на языке Python
         Создавать небольшие инструментальные программы
         """
-        item1.image = UIImage(named: "")
+        item1.image = UIImage(named: "Pythonbase")
         
         let item2 = CourseItem()
         item2.title = "Python Advanced"
@@ -1452,10 +1453,10 @@ class Storage {
         После курса вы сможете:
         Разрабатывать программы на языке Python
         """
-        item2.image = UIImage(named: "")
+        item2.image = UIImage(named: "Python adv")
         
         let item3 = CourseItem()
-        item3.title = "Веб-разработка на Python/Django"
+        item3.title = "Python/Django"
         item3.description = """
         Описание курса
         Django - свободный фреймворк для веб-приложений на языке Python. Интуитивно понятный язык шаблонов, имеет мощные и эффективные средства работы с базами данных и сессиями, встроенные средства авторизации пользователей и администрирования. Все это позволяет быстро и качественно разрабатывать веб-приложения коммерческого уровня.
@@ -1505,10 +1506,10 @@ class Storage {
         После курса вы сможете:
         Профессионально разрабатывать коммерческие веб-приложения с использованием Django
         """
-        item3.image = UIImage(named: "")
+        item3.image = UIImage(named: "Python:Django")
         
         let item4 = CourseItem()
-        item4.title = "Python/R for Data science"
+        item4.title = "Python/R"
         item4.description = """
         Описание курса
         Как понять, достаточно ли вы сильны для прохождения этого курса? Просто дайте самому себе ответы на следующие вопросы: интересует ли вас работа с данными (таблицами данных), манипуляции с ними и их визуализация? Помните ли вы из школы /университета/работы суть понятий «медиана», «мода», «распределение вероятностей»? Если ответы положительные, то у вас хорошие шансы на успешное прохождение курса.   Этот курс будет полезен:
@@ -1552,11 +1553,11 @@ class Storage {
         Анализировать данные и строить модели машинного обучения с помощью Python i R;
         Делать качественные и интерактивные визуализации данных.
         """
-        item4.image = UIImage(named: "")
+        item4.image = UIImage(named: "Python:R for Data science")
         
         let course = CourseSubject()
         course.title = "PYTHON"
-        course.image = UIImage(named: "")
+        course.image = UIImage(named: "python")
         course.time = "Evening"
         course.type = "Programming"
         course.courseItem = [item1, item2, item3, item4]
@@ -1608,7 +1609,7 @@ class Storage {
         Выполнять математические расчеты, решать задачи и реализовывать типовые алгоритмы
         Разрабатывать консольные приложения в операционной системе Linux
         """
-        item1.image = UIImage(named: "")
+        item1.image = UIImage(named: "C++ Base")
         
         let item2 = CourseItem()
         item2.title = "C++ Advanced"
@@ -1653,7 +1654,7 @@ class Storage {
         
         let course = CourseSubject()
         course.title = "C++"
-        course.image = UIImage(named: "")
+        course.image = UIImage(named: "c++")
         course.time = "Evening"
         course.type = "Programming"
         course.courseItem = [item1, item2]
@@ -1661,7 +1662,7 @@ class Storage {
     }
     func makeVebCourse() -> CourseSubject{
         let item1 = CourseItem()
-        item1.title = "Основы дизайна и графические редакторы"
+        item1.title = "Основы дизайна"
         item1.description = """
         Описание курса
         Хотите научиться работать с векторными и растровыми изображениями, ретушировать фотографии, создавать Gif-анимации и подготавливать дизайн-макеты к верстке вебсайтов? Тогда этот курс именно для Вас!
@@ -1745,7 +1746,7 @@ class Storage {
         Редактировать изображения и рисовать простые макеты сайтов
         Готовить макеты для верстки веб-сайтов и основам допечатной подготовки.
         """
-        item1.image = UIImage(named: "")
+        item1.image = UIImage(named: "C++ advan")
         
         let item2 = CourseItem()
         item2.title = "Графический дизайн"
@@ -1782,7 +1783,7 @@ class Storage {
         Придерживаться структуры при построении макета и, благодаря этому, улучшать логичность иерархии сайта
         Правильно использовать свой творческий потенциал и генерировать нестандартные решения для дизайна
         """
-        item2.image = UIImage(named: "")
+        item2.image = UIImage(named: "Графический дизайн")
         
         let item3 = CourseItem()
         item3.title = "UX Design"
@@ -1817,7 +1818,7 @@ class Storage {
         Проектировать веб- и мобильные интерфейсы;
         Работать в разных типах команд, осознавая свою роль
         """
-        item3.image = UIImage(named: "")
+        item3.image = UIImage(named: "UX Design")
         
         let item4 = CourseItem()
         item4.title = "UI Design"
@@ -1847,12 +1848,12 @@ class Storage {
         Правильно управлять иконками, анимацией и другим графическим контентом на сайте
         Разрабатывать и внедрять эффективные решения для повышения функциональности веб-сайта
         """
-        item4.image = UIImage(named: "")
+        item4.image = UIImage(named: "UI Design")
         
         
         let course = CourseSubject()
         course.title = "VEB DESIGN"
-        course.image = UIImage(named: "")
+        course.image = UIImage(named: "veb")
         course.time = "Evening"
         course.type = "Design"
         course.courseItem = [item1, item2, item3, item4]
@@ -1860,7 +1861,7 @@ class Storage {
     }
     func makeDigitalMarketingCourse() -> CourseSubject{
         let item1 = CourseItem()
-        item1.title = "Social Media Marketing (SMM)"
+        item1.title = "SMM"
         item1.description = """
         Описание курса
         Курс Social Media Marketing на примере Facebook и Instagram научит вас использовать социальные сети для продвижения продукта.
@@ -1885,7 +1886,7 @@ class Storage {
         Настраивать, запускать и администрировать рекламные кампании;
         Управлять репутацией компании и формировать комьюнити.
         """
-        item1.image = UIImage(named: "")
+        item1.image = UIImage(named: "smm")
         
         let item2 = CourseItem()
         item2.title = "Creative & Copywriting"
@@ -1919,7 +1920,7 @@ class Storage {
         Писать сильно
         Создавать тексты для различных каналов коммуникации
         """
-        item2.image = UIImage(named: "")
+        item2.image = UIImage(named: "Creative & Copywriting")
         
         let item3 = CourseItem()
                item3.title = "Email-маркетинг"
@@ -1950,13 +1951,13 @@ class Storage {
                Создавать автоматические сценарии писем (триггеры)
                Анализировать и понимать основные показатели эффективности email рассылок
                """
-               item3.image = UIImage(named: "")
+               item3.image = UIImage(named: "Email-маркетинг")
         
         
         
         let course = CourseSubject()
         course.title = "DIGITAL MARKETING"
-        course.image = UIImage(named: "")
+        course.image = UIImage(named: "digm")
         course.time = "Evening"
         course.type = "Marketing"
         course.courseItem = [item1, item2, item3]
@@ -1997,7 +1998,7 @@ class Storage {
         Проходить собеседования на Junior+ Unity3d разработчика в ведущие игровые студии Киева
         Правильно структурировать архитектуру игры
         """
-        item1.image = UIImage(named: "")
+        item1.image = UIImage(named: "Unity3D")
         
         let item2 = CourseItem()
         item2.title = "Геймдизайн"
@@ -2034,12 +2035,12 @@ class Storage {
         Настраивать игровой процесс и баланс;
         Работать с командой разработчиков.
         """
-        item2.image = UIImage(named: "")
+        item2.image = UIImage(named: "Геймдизайн")
         
         
         let course = CourseSubject()
         course.title = "GAME DEVELOPMENT"
-        course.image = UIImage(named: "")
+        course.image = UIImage(named: "game")
         course.time = "Evening"
         course.type = "Programming"
         course.courseItem = [item1, item2]
@@ -2121,7 +2122,7 @@ class Storage {
         Изучить узкоспециализированные возможности платформы iOS
 
         """
-        item1.image = UIImage(named: "")
+        item1.image = UIImage(named: "IOS base")
         
         let item2 = CourseItem()
         item2.title = "IOS Advanced"
@@ -2177,12 +2178,12 @@ class Storage {
         Читать, понимать, изменять чужой код
         Рассчитать возможности и время на создание приложения
         """
-        item2.image = UIImage(named: "")
+        item2.image = UIImage(named: "IOSad")
         
         
         let course = CourseSubject()
         course.title = "MOBILE DEVELOPMENT"
-        course.image = UIImage(named: "")
+        course.image = UIImage(named: "mobile-development")
         course.time = "Evening"
         course.type = "Programming"
         course.courseItem = [item1, item2]
@@ -2217,7 +2218,7 @@ class Storage {
         You learn the hardware and software architecture of the Cisco Nexus 9000 series of data center switches, including the Cisco Nexus 9300 fixed-configuration and Cisco Nexus 9500 modular platforms. Also, you have the opportunity to explore the programmability and automation features built in to these devices, including, but not limited to, Python, Power on Auto Provisioning (POAP), shell access, and the NX-API interface. Also, you discover how to perform management, maintenance, and monitoring activities on Cisco Nexus 9000 switch platforms.
         This course combines lecture materials and hands-on labs throughout to make sure you are able to successfully deploy, configure, maintain, and troubleshoot a Cisco Nexus 9000 switch infrastructure.
         """
-        item1.image = UIImage(named: "")
+        item1.image = UIImage(named: "cisco")
         
         let item2 = CourseItem()
         item2.title = "Configuring Cisco Nexus 9000 Switches in ACI Mode 2.0"
@@ -2289,7 +2290,7 @@ class Storage {
         
         let course = CourseSubject()
         course.title = "CISCO"
-        course.image = UIImage(named: "")
+        course.image = UIImage(named: "cisco")
         course.time = "Daytime"
         course.type = "System administrator"
         course.courseItem = [item1, item2]
@@ -2334,7 +2335,7 @@ class Storage {
         item1.skills = """
         you will be a professional
         """
-        item1.image = UIImage(named: "")
+        item1.image = UIImage(named: "linux")
         
         let item2 = CourseItem()
         item2.title = "Red Hat Enterprise Linux"
@@ -2379,12 +2380,12 @@ class Storage {
         настраивать базовую защиту системы;
         выполнять базовую диагностику.
         """
-        item2.image = UIImage(named: "")
+        item2.image = UIImage(named: "linux")
         
         
         let course = CourseSubject()
         course.title = "LINUX"
-        course.image = UIImage(named: "")
+        course.image = UIImage(named: "linux")
         course.time = "Daytime"
         course.type = "System administrator"
         course.courseItem = [item1, item2]
@@ -2413,7 +2414,7 @@ class Storage {
         item1.skills = """
         you will be good guy
         """
-        item1.image = UIImage(named: "")
+        item1.image = UIImage(named: "windows")
         
         let item2 = CourseItem()
         item2.title = "Windows Server 2016"
@@ -2439,12 +2440,12 @@ class Storage {
         item2.skills = """
         way to go!!
         """
-        item2.image = UIImage(named: "")
+        item2.image = UIImage(named: "windows")
         
         
         let course = CourseSubject()
         course.title = "MICROSOFT"
-        course.image = UIImage(named: "")
+        course.image = UIImage(named: "Microsoft")
         course.time = "Daytime"
         course.type = "System administrator"
         course.courseItem = [item1, item2]

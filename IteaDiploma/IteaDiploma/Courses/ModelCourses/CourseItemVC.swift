@@ -12,12 +12,13 @@ class CourseItemVC: UIViewController {
     
     @IBOutlet weak var titleLable: UILabel!
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var coverImage: UIImageView!
     
     var courseSubject: CourseSubject!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        titleLable.text = courseSubject.title
+        updateUI()
         tableView.register(UINib(nibName: "CourseItemCell", bundle: nil), forCellReuseIdentifier: "CourseItemCell")
         tableView.reloadData()
     }
@@ -42,7 +43,7 @@ extension CourseItemVC: UITableViewDelegate, UITableViewDataSource {
         return cell
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 120
+        return 180
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -53,4 +54,20 @@ extension CourseItemVC: UITableViewDelegate, UITableViewDataSource {
         
         navigationController?.pushViewController(vc, animated: true)
     }
+}
+
+extension CourseItemVC {
+    
+    func updateUI() {
+        coverImage.image = UIImage(named: "itea")
+        titleLable.backgroundColor = .white
+        titleLable.text = courseSubject.title
+        titleLable.textAlignment = .center
+        titleLable.layer.cornerRadius = 15
+        titleLable.clipsToBounds = true
+        
+        
+    }
+    
+    
 }

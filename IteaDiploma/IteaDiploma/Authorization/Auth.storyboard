@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="COy-83-dMD">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
@@ -273,8 +273,8 @@
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u53-9K-nJo">
                                                         <rect key="frame" x="10" y="84" width="354" height="0.0"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="height" priority="700" constant="20" id="Ofk-hM-fRw"/>
-                                                            <constraint firstAttribute="height" priority="700" id="yCZ-5Z-BGG"/>
+                                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" priority="700" constant="20" id="Ofk-hM-fRw"/>
+                                                            <constraint firstAttribute="height" priority="800" id="yCZ-5Z-BGG"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
@@ -315,8 +315,8 @@
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F2d-5C-EXB">
                                                         <rect key="frame" x="10" y="84" width="354" height="0.0"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="height" priority="700" constant="20" id="5II-mh-ddo"/>
-                                                            <constraint firstAttribute="height" priority="700" id="KoM-uU-gbi"/>
+                                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" priority="700" constant="20" id="5II-mh-ddo"/>
+                                                            <constraint firstAttribute="height" priority="800" id="KoM-uU-gbi"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
@@ -357,8 +357,8 @@
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RtD-ec-JsD">
                                                         <rect key="frame" x="10" y="84" width="354" height="0.0"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="height" priority="700" constant="20" id="3m4-ZA-Hha"/>
-                                                            <constraint firstAttribute="height" priority="700" id="chH-Py-S3B"/>
+                                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" priority="700" constant="20" id="3m4-ZA-Hha"/>
+                                                            <constraint firstAttribute="height" priority="800" id="chH-Py-S3B"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
@@ -399,8 +399,8 @@
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oGV-Da-idW">
                                                         <rect key="frame" x="10" y="84" width="354" height="0.0"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="height" priority="700" constant="20" id="5aZ-Mm-gRx"/>
-                                                            <constraint firstAttribute="height" priority="700" id="WU2-Xx-25o"/>
+                                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" priority="700" constant="20" id="5aZ-Mm-gRx"/>
+                                                            <constraint firstAttribute="height" priority="800" id="WU2-Xx-25o"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
@@ -441,8 +441,8 @@
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oXC-7J-d6A">
                                                         <rect key="frame" x="10" y="84" width="354" height="0.0"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="height" priority="700" id="WuD-qR-31a"/>
-                                                            <constraint firstAttribute="height" priority="700" constant="20" id="biv-aS-7z1"/>
+                                                            <constraint firstAttribute="height" priority="800" id="WuD-qR-31a"/>
+                                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" priority="700" constant="20" id="biv-aS-7z1"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
@@ -483,8 +483,8 @@
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BXO-E5-ESg">
                                                         <rect key="frame" x="10" y="84" width="354" height="0.0"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="height" priority="700" id="5iT-CX-hqA"/>
-                                                            <constraint firstAttribute="height" priority="700" constant="20" id="Bys-6N-zwt"/>
+                                                            <constraint firstAttribute="height" priority="800" id="5iT-CX-hqA"/>
+                                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" priority="700" constant="20" id="Bys-6N-zwt"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
@@ -531,7 +531,7 @@
                                                         <rect key="frame" x="55" y="45" width="309" height="0.0"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" priority="800" id="V88-M1-Cdh"/>
-                                                            <constraint firstAttribute="height" priority="700" constant="20" id="X8r-Hh-iP6"/>
+                                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" priority="700" constant="20" id="X8r-Hh-iP6"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <nil key="textColor"/>

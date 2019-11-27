@@ -32,9 +32,15 @@ extension CourseItemCell {
     }
     
     func updateCellUI() {
-        itemNameLabel.backgroundColor = .red
+        
+        itemNameLabel.backgroundColor = .white
         itemNameLabel.textAlignment = .center
         itemNameLabel.numberOfLines = 0
         itemNameLabel.textColor = .black
+        itemNameLabel.layer.masksToBounds = false
+        itemNameLabel.layer.shadowColor = UIColor.black.cgColor
+        itemNameLabel.layer.shadowRadius = 15
+        itemNameLabel.layer.shadowOffset = CGSize(width: 5.0, height: 5.0)
+        itemNameLabel.layer.shadowOpacity = 0.8
     }
 }

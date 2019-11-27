@@ -114,7 +114,6 @@ extension SignInVc {
         //view1
         firstBlockView.layer.cornerRadius = 15
         firstBlockView.clipsToBounds = true
-        firstBlockView.clipsToBounds = true
         firstBlockView.layer.masksToBounds = false
         firstBlockView.layer.shadowColor = UIColor.black.cgColor
         firstBlockView.layer.shadowRadius = 15
@@ -124,7 +123,6 @@ extension SignInVc {
         
         //view2
         secondBlockView.layer.cornerRadius = 15
-        secondBlockView.clipsToBounds = true
         secondBlockView.clipsToBounds = true
         secondBlockView.layer.masksToBounds = false
         secondBlockView.layer.shadowColor = UIColor.black.cgColor
