@@ -51,6 +51,8 @@ class FilterVC: UIViewController {
     @IBOutlet weak var filterLabel: UILabel!
     @IBOutlet weak var filterByTypeLabel: UILabel!
     
+    @IBOutlet weak var coverImage: UIImageView!
+    
     @IBOutlet weak var dailyButton: UIButton!
     @IBOutlet weak var eveningButton: UIButton!
     @IBOutlet weak var qAButton: UIButton!
@@ -59,6 +61,7 @@ class FilterVC: UIViewController {
     @IBOutlet weak var designButton: UIButton!
     @IBOutlet weak var marketingButton: UIButton!
     @IBOutlet weak var systemAdmButton: UIButton!
+    @IBOutlet weak var confirmButton: UIButton!
     
     var filterTime = FilterTime.none
     var filterType = FilterType.none
@@ -159,27 +162,35 @@ class FilterVC: UIViewController {
 extension FilterVC {
     
     func updateUI() {
+        coverImage.image = UIImage(named: "itea")
+        
+        confirmButton.clipsToBounds = true
+        confirmButton.backgroundColor = .white
+        confirmButton.layer.cornerRadius = 12
+        confirmButton.clipsToBounds = true
         
         titleLabel.text = "FILTER"
         titleLabel.textAlignment = .center
         titleLabel.textColor = .black
-        titleLabel.backgroundColor = .red
+        titleLabel.backgroundColor = .white
         titleLabel.layer.cornerRadius = 12
         titleLabel.clipsToBounds = true
         
         filterLabel.text = "By Time"
         filterLabel.textAlignment = .center
         filterLabel.textColor = .black
-        filterLabel.backgroundColor = .red
+        filterLabel.backgroundColor = .white
         filterLabel.layer.cornerRadius = 12
         filterLabel.clipsToBounds = true
         
         filterByTypeLabel.text = "By Tyme"
         filterByTypeLabel.textAlignment = .center
         filterByTypeLabel.textColor = .black
-        filterByTypeLabel.backgroundColor = .red
+        filterByTypeLabel.backgroundColor = .white
         filterByTypeLabel.layer.cornerRadius = 12
         filterByTypeLabel.clipsToBounds = true
+        
+        
     }
     /// обновляет кнопки для времен в соответсвии с моделями
     func updateTimesUI() {

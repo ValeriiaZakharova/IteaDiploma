@@ -15,7 +15,8 @@ class CourseItemVC: UIViewController {
     @IBOutlet weak var coverImage: UIImageView!
     
     var courseSubject: CourseSubject!
-
+    var user: User!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         updateUI()
@@ -51,7 +52,7 @@ extension CourseItemVC: UITableViewDelegate, UITableViewDataSource {
         let storyboardCourses = UIStoryboard(name: "Courses", bundle: nil)
         let vc = storyboardCourses.instantiateViewController(identifier: "CourseDescriptionVC") as! CourseDescriptionVC
         vc.courseItem = courseSubject.courseItem[indexPath.row]
-        
+        vc.user = user
         navigationController?.pushViewController(vc, animated: true)
     }
 }
@@ -65,9 +66,6 @@ extension CourseItemVC {
         titleLable.textAlignment = .center
         titleLable.layer.cornerRadius = 15
         titleLable.clipsToBounds = true
-        
-        
+
     }
-    
-    
 }

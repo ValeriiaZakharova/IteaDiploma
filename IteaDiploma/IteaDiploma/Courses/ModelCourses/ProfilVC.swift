@@ -10,19 +10,20 @@ import UIKit
 
 class ProfilVC: UIViewController {
     
+    @IBOutlet weak var coverImage: UIImageView!
     @IBOutlet weak var editButton: UIButton!
     @IBOutlet weak var lastCoursesButton: UIButton!
     
     @IBOutlet weak var userImageView: UIImageView!
-    @IBOutlet weak var userNameLabel: UILabel!
-    @IBOutlet weak var usreSecondNameLabel: UILabel!
-    @IBOutlet weak var useAgeLabel: UILabel!
-    @IBOutlet weak var userCityLabel: UILabel!
-    @IBOutlet weak var userBirthdayLabel: UILabel!
-    @IBOutlet weak var userEmailLabel: UILabel!
-    @IBOutlet weak var userPhoneLabel: UILabel!
-    @IBOutlet weak var userCurrentCoursesLabel: UILabel!
-    @IBOutlet weak var userWorkLabel: UILabel!
+    @IBOutlet weak var userNameTF: UITextField!
+    @IBOutlet weak var userSecondNameTF: UITextField!
+    @IBOutlet weak var useAgeTF: UITextField!
+    @IBOutlet weak var userCityTF: UITextField!
+    @IBOutlet weak var userBirthdayTF: UITextField!
+    @IBOutlet weak var userEmailTF: UITextField!
+    @IBOutlet weak var userPhoneTF: UITextField!
+    @IBOutlet weak var userCurrentCoursesTF: UITextField!
+    @IBOutlet weak var userWorkTF: UITextField!
     
     @IBOutlet weak var ageLabel: UILabel!
     @IBOutlet weak var cityLabel: UILabel!
@@ -32,11 +33,42 @@ class ProfilVC: UIViewController {
     @IBOutlet weak var currentCoursLabel: UILabel!
     @IBOutlet weak var workLabel: UILabel!
     
-    var users: [User] = []
+    @IBOutlet weak var firstView: UIView!
+    @IBOutlet weak var secondView: UIView!
+    
+    @IBOutlet weak var bottomConstScrollView: NSLayoutConstraint!
+    var editMode = false
+    
+    var user: User!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        users = Storage().makeUsers()
+        
+        //textfield delegate
+        userNameTF.delegate = self
+        userSecondNameTF.delegate = self
+        useAgeTF.delegate = self
+        userCityTF.delegate = self
+        userBirthdayTF.delegate = self
+        userEmailTF.delegate = self
+        userPhoneTF.delegate = self
+        userCurrentCoursesTF.delegate = self
+        userWorkTF.delegate = self
+        
+        // defult value for TextFieads - thea are not enabled
+        userNameTF.isEnabled = editMode
+        userSecondNameTF.isEnabled = editMode
+        useAgeTF.isEnabled = editMode
+        userCityTF.isEnabled = editMode
+        userBirthdayTF.isEnabled = editMode
+        userEmailTF.isEnabled = editMode
+        userPhoneTF.isEnabled = editMode
+        userCurrentCoursesTF.isEnabled = editMode
+        userWorkTF.isEnabled = editMode
+        
+        let keyBoardHide = UITapGestureRecognizer(target: self, action: #selector(keyboardWillHide))
+        view.addGestureRecognizer(keyBoardHide)
+        
         updateUI()
         updateLabel()
     }
@@ -46,79 +78,122 @@ class ProfilVC: UIViewController {
     }
     
     @IBAction func didTapGoEditProfile(_ sender: Any) {
-//        let storyboardCourses = UIStoryboard(name: "Courses", bundle: nil)
-//        let vc = storyboardCourses.instantiateViewController(identifier: "EditProfileVC") as! EditProfileVC
-//        vc.user = user
-//        navigationController?.pushViewController(vc, animated: true)
+        
+        if editButton.isSelected == false {
+            editButton.setTitle("Safe", for: .normal)
+            userNameTF.isEnabled = !editMode
+            userSecondNameTF.isEnabled = !editMode
+            useAgeTF.isEnabled = !editMode
+            userCityTF.isEnabled = !editMode
+            userBirthdayTF.isEnabled = !editMode
+            userPhoneTF.isEnabled = !editMode
+            userWorkTF.isEnabled = !editMode
+            editButton.isSelected = true
+        } else {
+            editButton.setTitle("Edit", for: .normal)
+            userNameTF.isEnabled = editMode
+            userSecondNameTF.isEnabled = editMode
+            useAgeTF.isEnabled = editMode
+            userCityTF.isEnabled = editMode
+            userBirthdayTF.isEnabled = editMode
+            userPhoneTF.isEnabled = editMode
+            userWorkTF.isEnabled = editMode
+            editButton.isSelected = false
+            
+        }
     }
     
     @IBAction func didTapgoToLastCourses(_ sender: Any) {
         let storyboardCourses = UIStoryboard(name: "Courses", bundle: nil)
         let vc = storyboardCourses.instantiateViewController(identifier: "UserCoursesVC") as! UserCoursesVC
-        //vc.user = users
+        vc.user = user
         navigationController?.pushViewController(vc, animated: true)
+    }
+}
+extension ProfilVC: UITextFieldDelegate {
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        bottomConstScrollView.constant = 300
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        bottomConstScrollView.constant = 0
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        switch textField {
+        case userNameTF:
+            userSecondNameTF.becomeFirstResponder()
+        case userSecondNameTF:
+            useAgeTF.becomeFirstResponder()
+        case useAgeTF:
+            userCityTF.becomeFirstResponder()
+        case userCityTF:
+            userBirthdayTF.becomeFirstResponder()
+        case userBirthdayTF:
+            userPhoneTF.becomeFirstResponder()
+        case userPhoneTF:
+            userWorkTF.becomeFirstResponder()
+        case userWorkTF:
+            self.view.endEditing(true)
+        default:
+            fatalError()
+        }
+        return true
+    }
+}
+
+extension ProfilVC {
+    @objc func keyboardWillHide() {
+        self.view.endEditing(true)
     }
 }
 
 extension ProfilVC {
     func updateLabel() {
-//        userImageView.image = user1.photo
-//        userNameLabel.text = user.name
-//        usreSecondNameLabel.text = user.surName
-//        useAgeLabel.text = user.age
-//        userCityLabel.text = user.city
-//        userWorkLabel.text = user.work
-//        userBirthdayLabel.text = user.birthday
-//        userEmailLabel.text = user.email
-//        userPhoneLabel.text = user.phone
-//        userCurrentCoursesLabel.text = user.currentCourse?.title
+        userImageView.image = user.photo
+        userNameTF.text = user.name
+        userSecondNameTF.text = user.surName
+        useAgeTF.text = user.age
+        userCityTF.text = user.city
+        userWorkTF.text = user.work
+        userBirthdayTF.text = user.birthday
+        userEmailTF.text = user.email
+        userPhoneTF.text = user.phone
+        userCurrentCoursesTF.text = user.currentCourse?.title
     }
     
     func updateUI() {
-        editButton.backgroundColor = .red
+        
+        coverImage.image = UIImage(named: "itea")
+        editButton.backgroundColor = .white
         editButton.layer.cornerRadius = 12
         editButton.clipsToBounds = true
         
-        lastCoursesButton.backgroundColor = .red
+        lastCoursesButton.backgroundColor = .white
         lastCoursesButton.layer.cornerRadius = 12
         lastCoursesButton.clipsToBounds = true
         
         userImageView.layer.cornerRadius = userImageView.frame.width / 2
+        userImageView.layer.borderColor = UIColor.black.cgColor
+        userImageView.layer.borderWidth = 1
         userImageView.clipsToBounds = true
         
-        ageLabel.backgroundColor = .red
-        ageLabel.textAlignment = .center
-        ageLabel.layer.cornerRadius = 12
-        ageLabel.clipsToBounds = true
+        firstView.layer.cornerRadius = 15
+        firstView.clipsToBounds = true
+        firstView.layer.masksToBounds = false
+        firstView.layer.shadowColor = UIColor.black.cgColor
+        firstView.layer.shadowRadius = 15
+        firstView.layer.cornerRadius = 15.0
+        firstView.layer.shadowOffset = CGSize(width: 5.0, height: 5.0)
+        firstView.layer.shadowOpacity = 0.8
         
-        cityLabel.backgroundColor = .red
-        cityLabel.textAlignment = .center
-        cityLabel.layer.cornerRadius = 12
-        cityLabel.clipsToBounds = true
-        
-        birthdayLabel.backgroundColor = .red
-        birthdayLabel.textAlignment = .center
-        birthdayLabel.layer.cornerRadius = 12
-        birthdayLabel.clipsToBounds = true
-        
-        emailLabel.backgroundColor = .red
-        emailLabel.textAlignment = .center
-        emailLabel.layer.cornerRadius = 12
-        emailLabel.clipsToBounds = true
-        
-        phoneLabel.backgroundColor = .red
-        phoneLabel.textAlignment = .center
-        phoneLabel.layer.cornerRadius = 12
-        phoneLabel.clipsToBounds = true
-        
-        currentCoursLabel.backgroundColor = .red
-        currentCoursLabel.textAlignment = .center
-        currentCoursLabel.layer.cornerRadius = 12
-        currentCoursLabel.clipsToBounds = true
-        
-        workLabel.backgroundColor = .red
-        workLabel.textAlignment = .center
-        workLabel.layer.cornerRadius = 12
-        workLabel.clipsToBounds = true
+        secondView.layer.cornerRadius = 15
+        secondView.clipsToBounds = true
+        secondView.layer.masksToBounds = false
+        secondView.layer.shadowColor = UIColor.black.cgColor
+        secondView.layer.shadowRadius = 15
+        secondView.layer.cornerRadius = 15.0
+        secondView.layer.shadowOffset = CGSize(width: 5.0, height: 5.0)
+        secondView.layer.shadowOpacity = 0.8
     }
 }

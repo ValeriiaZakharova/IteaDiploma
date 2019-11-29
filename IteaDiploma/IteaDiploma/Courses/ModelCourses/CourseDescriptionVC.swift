@@ -24,6 +24,7 @@ class CourseDescriptionVC: UIViewController {
     
     
     var courseItem: CourseItem!
+    var user: User!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,8 +44,8 @@ class CourseDescriptionVC: UIViewController {
     
     @IBAction func didTapGoOnCourse(_ sender: Any) {
         let storyboardCourses = UIStoryboard(name: "Courses", bundle: nil)
-        let vc = storyboardCourses.instantiateViewController(identifier: "CourseApplyVC") as! CourceApplyVC
-    
+        let vc = storyboardCourses.instantiateViewController(identifier: "CourceApplyVC") as! CourceApplyVC
+        vc.user = user
         navigationController?.pushViewController(vc, animated: true)
     }
 }

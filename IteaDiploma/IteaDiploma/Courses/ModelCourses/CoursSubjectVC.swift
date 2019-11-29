@@ -19,7 +19,7 @@ class CoursSubjectVC: UIViewController {
     
     @IBOutlet weak var collectionView: UICollectionView!
     
-    var users: [User] = []
+    var user: User!
     var courseSubjects: [CourseSubject] = []
     
     var filterTime = FilterTime.none
@@ -43,7 +43,7 @@ class CoursSubjectVC: UIViewController {
     @IBAction func gogTapGoToProfile(_ sender: Any) {
         let storyboardCourses = UIStoryboard(name: "Courses", bundle: nil)
         let vc = storyboardCourses.instantiateViewController(identifier: "ProfilVC") as! ProfilVC
-        
+        vc.user = user
         navigationController?.pushViewController(vc, animated: true)
     }
     
@@ -86,6 +86,7 @@ extension CoursSubjectVC:  UICollectionViewDelegate, UICollectionViewDataSource,
         
         let storyboardCourses = UIStoryboard(name: "Courses", bundle: nil)
         let vc = storyboardCourses.instantiateViewController(identifier: "CourseItemVC") as! CourseItemVC
+        vc.user = user
         vc.courseSubject = courseSubjects[indexPath.row]
         navigationController?.pushViewController(vc, animated: true)
     }

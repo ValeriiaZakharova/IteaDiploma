@@ -31,33 +31,42 @@ class SignInVc: UIViewController {
         
         userNameTextField.delegate = self
         passwordTextField.delegate = self
-        updateView()
+        
         let keyBoardHide = UITapGestureRecognizer(target: self, action: #selector(keyboardWillHide))
         view.addGestureRecognizer(keyBoardHide)
+        updateView()
     }
     
     @IBAction func didTapSignIn(_ sender: Any) {
-        var authorizedUser: User? = nil
+        var authorizedUser: User? = nil //изначально там ничего не лежит
+       print("A")
         for user in users {
+            
             if userNameTextField.text == user.email, passwordTextField.text == user.password {
+                print("B")
                 authorizedUser = user
                 break
             }
+            print("C")
         }
         
         if let user = authorizedUser {
+            print("D")
+            
             let storyboardCourses = UIStoryboard(name: "Courses", bundle: nil)
             let vc = storyboardCourses.instantiateViewController(identifier: "CoursSubjectVC") as! CoursSubjectVC
-            //vc.users = users
+            vc.user = user
             navigationController?.pushViewController(vc, animated: true)
+      
         } else {
+        print("E")
             let alert = UIAlertController(title: "Sorry, something went wrong", message: "Please check your email or password", preferredStyle: .alert)
             let close = UIAlertAction(title: "OK", style: .cancel, handler: nil)
             alert.addAction(close)
             self.present(alert, animated: true, completion: nil)
         }
-        
     }
+    
     @IBAction func didTapSignUp(_ sender: Any) {
     
         let storyboardAuth = UIStoryboard(name: "Auth", bundle: nil)

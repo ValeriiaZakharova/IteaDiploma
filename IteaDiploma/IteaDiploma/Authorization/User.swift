@@ -21,8 +21,8 @@ class User {
     var birthday: String?
     var email: String?
     var phone: String?
-    var currentCourse: CourseItem?
-    var completedCourses: [CourseItem]?
+    var currentCourse: CourseItem!
+    var completedCourses: [CourseItem] = []
     var work: String?
 }
 

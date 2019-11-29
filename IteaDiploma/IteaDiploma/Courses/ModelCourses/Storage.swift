@@ -2036,8 +2036,7 @@ class Storage {
         Работать с командой разработчиков.
         """
         item2.image = UIImage(named: "Геймдизайн")
-        
-        
+    
         let course = CourseSubject()
         course.title = "GAME DEVELOPMENT"
         course.image = UIImage(named: "game")
@@ -2180,7 +2179,6 @@ class Storage {
         """
         item2.image = UIImage(named: "IOSad")
         
-        
         let course = CourseSubject()
         course.title = "MOBILE DEVELOPMENT"
         course.image = UIImage(named: "mobile-development")
@@ -2286,7 +2284,6 @@ class Storage {
         Описать способы миграции с ACI
         """
         item2.image = UIImage(named: "")
-        
         
         let course = CourseSubject()
         course.title = "CISCO"
@@ -2472,7 +2469,7 @@ extension Storage {
         user1.photo = UIImage(named: "photo")
         user1.userName = "valeriikaa"
         
-        let items = makeTestingCourse().courseItem + makeCiscoCourse().courseItem
+        let items = makeTestingCourse().courseItem
         
         user1.completedCourses = items
         if let course = makeMobileDevelopmentCourse().courseItem.first {
