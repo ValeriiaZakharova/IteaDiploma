@@ -15,8 +15,6 @@ class CoursSubjectVC: UIViewController {
     @IBOutlet weak var profileButton: UIButton!
     @IBOutlet weak var filterButton: UIButton!
     
-    @IBOutlet weak var searchTextField: UITextField!
-    
     @IBOutlet weak var collectionView: UICollectionView!
     
     var user: User!
@@ -112,11 +110,8 @@ extension CoursSubjectVC {
         filterButton.backgroundColor = .white
         filterButton.layer.cornerRadius = 10
         filterButton.clipsToBounds = true
-        //textfield
-        searchTextField.borderStyle = .roundedRect
-        
+
         //image view
-        
         coverImage.image = UIImage(named: "itea")
     }
     
