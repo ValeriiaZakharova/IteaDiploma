@@ -144,7 +144,6 @@ class FilterVC: UIViewController {
     }
     @IBAction func didTapConfirmFilter(_ sender: Any) {
         
-        
         if let navigationcontrollers = navigationController?.viewControllers {
             if let courseSubjectVc = navigationcontrollers[navigationcontrollers.count - 2] as? CoursSubjectVC {
                 courseSubjectVc.filterType = filterType

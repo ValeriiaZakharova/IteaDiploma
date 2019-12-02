@@ -15,13 +15,14 @@ class CourseSubjCell: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        contentView.clipsToBounds = true
+//        contentView.clipsToBounds = true
     }
     
-    override func layoutSubviews() {
-        super.layoutSubviews()
-        contentView.layer.cornerRadius = contentView.bounds.height / 2
-    }
+    //make cell round 
+//    override func layoutSubviews() {
+//        super.layoutSubviews()
+//        contentView.layer.cornerRadius = contentView.bounds.height / 2
+//    }
     
 }
 

@@ -16,10 +16,12 @@ class CourceApplyVC: UIViewController {
     @IBOutlet weak var firstView: UIView!
     @IBOutlet weak var secondView: UIView!
     @IBOutlet weak var thirdView: UIView!
+    @IBOutlet weak var forthView: UIView!
     
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var surNameTextField: UITextField!
     @IBOutlet weak var phoneTextField: UITextField!
+    @IBOutlet weak var commentsTextView: UITextView!
     
     @IBOutlet weak var errorNameLabel: UILabel!
     @IBOutlet weak var errorSurNameLabel: UILabel!
@@ -49,11 +51,14 @@ class CourceApplyVC: UIViewController {
         let isSurNameValid = validateSurName(textField: surNameTextField)
         let isSurNamePhoneNumber = validatePhoneNumber(textField: phoneTextField)
         
+        
         if isNameValid, isSurNameValid, isSurNamePhoneNumber {
-            let storyboardCourses = UIStoryboard(name: "Courses", bundle: nil)
-            let vc = storyboardCourses.instantiateViewController(identifier: "CoursSubjectVC") as! CoursSubjectVC
+            if let navigationcontrollers = navigationController?.viewControllers {
+                if let courseSubjectVc = navigationcontrollers[navigationcontrollers.count - 4] as? CoursSubjectVC {
+                    navigationController?.popToViewController(courseSubjectVc, animated: true)
+                }
+            }
             
-            navigationController?.pushViewController(vc, animated: true)
         }
     }
 }
@@ -128,7 +133,7 @@ extension CourceApplyVC {
         if let name = user.name {
             nameTextField.text = name
         }
-        if let surName = user.name {
+        if let surName = user.surName {
             surNameTextField.text = surName
         }
         if let phone = user.phone {
@@ -164,6 +169,19 @@ extension CourceApplyVC {
         thirdView.layer.cornerRadius = 15.0
         thirdView.layer.shadowOffset = CGSize(width: 5.0, height: 5.0)
         thirdView.layer.shadowOpacity = 0.8
+        
+        forthView.layer.cornerRadius = 15
+        forthView.clipsToBounds = true
+        forthView.layer.masksToBounds = false
+        forthView.layer.shadowColor = UIColor.black.cgColor
+        forthView.layer.shadowRadius = 15
+        forthView.layer.cornerRadius = 15.0
+        forthView.layer.shadowOffset = CGSize(width: 5.0, height: 5.0)
+        forthView.layer.shadowOpacity = 0.8
+        
+        commentsTextView.layer.borderColor = UIColor.black.cgColor
+        commentsTextView.layer.borderWidth = 0.8
+        commentsTextView.clipsToBounds = true
         
         goOnCourseButton.setTitle("Go On Course!", for: .normal)
         goOnCourseButton.layer.cornerRadius = 12

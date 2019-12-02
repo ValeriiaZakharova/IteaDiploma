@@ -2189,7 +2189,7 @@ class Storage {
     }
     func makeCiscoCourse() -> CourseSubject{
         let item1 = CourseItem()
-        item1.title = "Configuring the Cisco Nexus 9000 in NX-OS Mode"
+        item1.title = "Cisco Nexus 9000"
         item1.description = """
         Кому следует посетить
         This course is designed for traditional network and data center engineers tasked with the installation and operation of Cisco Nexus 9000 Series Switches in a data center environment who want to upgrade their skills.
@@ -2219,7 +2219,7 @@ class Storage {
         item1.image = UIImage(named: "cisco")
         
         let item2 = CourseItem()
-        item2.title = "Configuring Cisco Nexus 9000 Switches in ACI Mode 2.0"
+        item2.title = "Cisco Nexus"
         item2.description = """
         Кому следует посетить
         Курс разработан для:
@@ -2295,7 +2295,7 @@ class Storage {
     }
     func makeLinoxCourse() -> CourseSubject{
         let item1 = CourseItem()
-        item1.title = "Asterisk Administration Essentials"
+        item1.title = "Asterisk"
         item1.description = """
         Базовый курс для администратора Asterisk  ( Asterisk – это супер конвергентная платформа компьютерной телефонии,распространяемая по лицензии GNU GPL).  Знания приобретенные в процессе обучения помогут вам быть успешным в работе.
         """
@@ -2335,7 +2335,7 @@ class Storage {
         item1.image = UIImage(named: "linux")
         
         let item2 = CourseItem()
-        item2.title = "Red Hat Enterprise Linux"
+        item2.title = "Red Hat Linux"
         item2.description = """
         Курс адресован пользователям Linux/UNIX, которые хотят освоить методы системного администрирования Red Hat Enterprise Linux.  Этот курс длительностью 5 дней дает интенсивную практическую подготовку по Red Hat Enterprise Linux.
         """
@@ -2390,7 +2390,7 @@ class Storage {
     }
     func makeMicrosoftCourse() -> CourseSubject{
         let item1 = CourseItem()
-        item1.title = "Windows Server 2012"
+        item1.title = "Windows 2012"
         item1.description = """
         Приобретаемые навыки:
         Использовать групповые политики для управления компьютерами, учётными записями и настройками Windows
@@ -2414,7 +2414,7 @@ class Storage {
         item1.image = UIImage(named: "windows")
         
         let item2 = CourseItem()
-        item2.title = "Windows Server 2016"
+        item2.title = "Windows 2016"
         item2.description = """
         Цель курса – предоставить слушателям знания и навыки, необходимые для управления широким спектром серверных и клиентских продуктов. В курсе рассмотрены технологии, которые позволяют интегрировать Windows PowerShell с Microsoft Exchange Server, Microsoft Windows Active Directory Domain Services, Microsoft SharePoint Server. Данный курс фокусируется на создании сценариев Windows PowerShell, на изучении понятий и методов, необходимых для создания многоразовых профессиональных инструментов.
         """
